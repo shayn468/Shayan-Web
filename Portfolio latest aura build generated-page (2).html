@@ -1,0 +1,2023 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2B Web Development Agency USA | High-Performance Websites</title>
+  <meta name="description"
+    content="Partner with a premium B2B web development agency in the United States. Custom website development services, React development, and WordPress systems engineered to drive business growth.">
+  <meta name="keywords"
+    content="affordable web development company USA, custom website development services USA, web development agency United States, hire web developer USA, best web development agency for small business USA, B2B web development services United States, WordPress development company USA, React development agency USA">
+
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shayan Web Consulting",
+    "url": "https://shayn468.github.io",
+    "logo": "https://shayn468.github.io/logo.png",
+    "sameAs": [
+      "https://github.com/shayn468"
+    ]
+  }
+  </script>
+
+  <!-- B2B Service Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "B2B Web Development Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Shayan Web Consulting",
+      "url": "https://shayn468.github.io"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "Contact for Quote"
+    },
+    "description": "High-performance custom web development services, specialized in React, WordPress, and speed optimization for B2B brands and small businesses in the USA."
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060706;
+      --panel: #10110f;
+      --panel-2: #151713;
+      --cream: #f3f0e8;
+      --muted: rgba(243, 240, 232, 0.58);
+      --soft: rgba(243, 240, 232, 0.12);
+      --line: rgba(243, 240, 232, 0.10);
+      --orange: #ff5a1f;
+      --orange-soft: rgba(255, 90, 31, 0.22);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+      color-scheme: dark;
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 70% 10%, rgba(255, 90, 31, 0.12), transparent 34rem),
+        radial-gradient(circle at 15% 45%, rgba(243, 240, 232, 0.05), transparent 26rem),
+        var(--bg);
+      color: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+    }
+
+    ::selection {
+      background: var(--cream);
+      color: var(--bg);
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .18;
+      background-image: radial-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px);
+      background-size: 4px 4px;
+      mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+    }
+
+    .grid-veil {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: .13;
+      background-image:
+        linear-gradient(rgba(243, 240, 232, .09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243, 240, 232, .09) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 84%, transparent);
+    }
+
+    .page-rail {
+      position: fixed;
+      left: 22px;
+      bottom: 28px;
+      z-index: 45;
+      pointer-events: none;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: rgba(243, 240, 232, .38);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .wordmark {
+      letter-spacing: -0.08em;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: right;
+      background: currentColor;
+      transition: transform .45s var(--ease);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(243, 240, 232, .54);
+    }
+
+    .section-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--orange);
+      box-shadow: 0 0 20px rgba(255, 90, 31, .5);
+    }
+
+    .reveal,
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(32px);
+      will-change: opacity, transform;
+    }
+
+    .hero-card {
+      transform-origin: center;
+      will-change: transform;
+      border: 1px solid var(--line);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, .62);
+    }
+
+    .glass {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .035);
+      backdrop-filter: blur(18px);
+    }
+
+    .magnetic-button {
+      transition: transform .45s var(--ease), background .45s var(--ease), border-color .45s var(--ease);
+    }
+
+    .magnetic-button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 90, 31, .45);
+      background: rgba(255, 90, 31, .13);
+    }
+
+    .service-card,
+    .pricing-card,
+    .note-card,
+    .archive-card {
+      transition: transform .55s var(--ease), border-color .55s var(--ease), background .55s var(--ease);
+      will-change: transform, opacity;
+    }
+
+    .service-card:hover,
+    .pricing-card:hover,
+    .note-card:hover,
+    .archive-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 90, 31, .34);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .note-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      background: linear-gradient(135deg, rgba(243, 240, 232, 0.14), transparent 42%);
+      transition: opacity 500ms var(--ease);
+    }
+
+    .note-card:hover::after {
+      opacity: 1;
+    }
+
+    .masked-number {
+      color: transparent;
+      background-image: var(--number-image);
+      background-position: 50% 50%;
+      background-size: 118%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: saturate(.82) brightness(1.06);
+      will-change: transform, background-position;
+    }
+
+    .strip-image,
+    .archive-card img {
+      will-change: transform;
+      transform: scale(1.08);
+    }
+
+    .archive-card:hover img {
+      transform: scale(1.16);
+      opacity: 0.95;
+    }
+
+    .parallax-image {
+      position: absolute;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #101310;
+      opacity: .68;
+      will-change: transform;
+    }
+
+    .parallax-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.72) brightness(.72);
+      transform: scale(1.14);
+      will-change: transform;
+    }
+
+    .timeline-bar {
+      transform: scaleX(0);
+      transform-origin: left center;
+      background: linear-gradient(90deg, var(--orange), rgba(243, 240, 232, .82));
+    }
+
+    .footer-input {
+      transition: border-color .35s var(--ease), background .35s var(--ease);
+    }
+
+    .footer-input:hover {
+      border-color: rgba(255, 90, 31, .35);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    /* Brand preloader */
+    .ax-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      will-change: transform;
+    }
+
+    .ax-loader__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      padding: 0 24px;
+    }
+
+    .ax-loader__brand {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: var(--cream);
+      font-size: clamp(2.8rem, 9vw, 6.4rem);
+      opacity: 0;
+      transform: translateY(18px);
+      filter: blur(10px);
+      will-change: transform, opacity, filter;
+    }
+
+    .ax-loader__brand sup {
+      font-size: 0.26em;
+      font-weight: 800;
+      letter-spacing: 0;
+      align-self: flex-start;
+      margin-left: 0.02em;
+    }
+
+    .ax-dot {
+      width: 0.14em;
+      height: 0.14em;
+      margin-left: 0.14em;
+      border-radius: 999px;
+      background: var(--orange);
+      box-shadow: 0 0 28px rgba(255, 90, 31, 0.65);
+    }
+
+    .ax-loader__track {
+      width: min(300px, 64vw);
+      height: 2px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(243, 240, 232, 0.12);
+    }
+
+    .ax-loader__bar {
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: left center;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--orange), rgba(243, 240, 232, 0.82));
+    }
+
+    .ax-loader__meta {
+      display: flex;
+      justify-content: space-between;
+      width: min(300px, 64vw);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(243, 240, 232, 0.45);
+      opacity: 0;
+    }
+
+    @media (max-width: 767px) {
+      .wordmark {
+        letter-spacing: -0.065em;
+      }
+
+      .page-rail {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+
+      .ax-loader {
+        display: none;
+      }
+
+      .reveal,
+      [data-reveal],
+      .timeline-bar {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+  <!-- aura-ga4-start -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2M6V79H761');
+  </script>
+  <!-- aura-ga4-end -->
+</head>
+
+<body class="">
+  <h1 class="sr-only">B2B Web Development Agency & Custom Website Services in the USA</h1>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-veil" aria-hidden="true"></div>
+  <div class="page-rail" aria-hidden="true">
+    Shayan — Freelance Web Consultant
+  </div>
+
+
+  <header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 py-5 md:px-8 lg:px-12">
+    <a href="#home" class="text-lg font-semibold tracking-[-0.055em] text-[#f3f0e8] md:text-xl">
+      Shayan.
+    </a>
+
+    <nav class="hidden items-center gap-11 text-xs font-bold text-[#f3f0e8]/82 md:flex">
+      <a href="#work" class="nav-link">
+        <span class="mr-5 inline-block h-1.5 w-1.5 rounded-full bg-[#ff5a1f] align-middle"></span>
+        Work
+      </a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer" class="nav-link">Let's Chat</a>
+    </nav>
+
+    <button class="glass flex h-10 w-10 items-center justify-center rounded-full md:hidden" aria-label="Open menu">
+      <i data-lucide="menu" class="h-4 w-4"></i>
+    </button>
+  </header>
+  <main id="home" class="relative z-10 overflow-hidden">
+
+    <div class="pin-spacer"
+      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1763px; padding: 0px 0px 943.001px;">
+      <div class="pin-spacer"
+        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0.001px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+        <div class="pin-spacer"
+          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+          <div class="pin-spacer"
+            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+            <div class="pin-spacer"
+              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+              <div class="pin-spacer"
+                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                <div class="pin-spacer"
+                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                  <div class="pin-spacer"
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                    <div class="pin-spacer"
+                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                      <div class="pin-spacer"
+                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                        <div class="pin-spacer"
+                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                          <div class="pin-spacer"
+                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                            <div class="pin-spacer"
+                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                              <div class="pin-spacer"
+                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                <div class="pin-spacer"
+                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                  <div class="pin-spacer"
+                                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                    <div class="pin-spacer"
+                                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                      <div class="pin-spacer"
+                                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                        <div class="pin-spacer"
+                                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+
+                                          <div class="pin-spacer"
+                                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                            <div class="pin-spacer"
+                                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                              <div class="pin-spacer"
+                                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                                <div class="pin-spacer"
+                                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px -440px 0px 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                                  <section
+                                                    class="hero-section relative flex min-h-screen items-center overflow-hidden px-5 py-24 md:px-8 lg:px-12"
+                                                    style="inset: 0px auto auto 0px; margin: 0px; max-width: 1265px; width: 1265px; max-height: 820px; height: 820px; padding: 96px 48px; box-sizing: border-box; position: fixed;">
+                                                    <div class="hero-copy relative z-20 max-w-[360px]">
+                                                      <p class="section-label mb-10">
+                                                        Freelance Web Consultant
+                                                      </p>
+                                                      <p
+                                                        class="max-w-[340px] text-[21px] font-medium leading-[1.45] tracking-[-0.045em] text-[#f3f0e8]/76 md:text-[25px]">
+                                                        <span class="text-[#f3f0e8]">
+                                                          Websites that help
+                                                          businesses grow.
+                                                        </span>
+                                                        For over six years, I've been
+                                                        helping founders, brands, and
+                                                        businesses build digital
+                                                        experiences designed to drive
+                                                        growth, increase conversions,
+                                                        and create lasting impact.
+                                                      </p>
+
+                                                      <a href="#work"
+                                                        class="magnetic-button mt-14 inline-flex items-center gap-5 rounded-full border border-[#f3f0e8]/12 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-[#f3f0e8]">
+                                                        View Work
+                                                        <span
+                                                          class="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff5a1f] text-[#060706]">
+                                                          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                                        </span>
+                                                      </a>
+                                                    </div>
+
+                                                    <div
+                                                      class="hero-stack absolute left-1/2 top-[48%] z-10 h-[430px] w-[310px] -translate-x-1/2 -translate-y-1/2 md:h-[560px] md:w-[430px] lg:h-[620px] lg:w-[480px]">
+                                                      <div
+                                                        class="hero-card absolute inset-0 -translate-x-20 translate-y-12 -rotate-[17deg] rounded-[20px] bg-[#151713]">
+                                                        <div
+                                                          class="h-full w-full rounded-[20px] bg-gradient-to-br from-[#ff5a1f]/30 via-transparent to-black">
+                                                        </div>
+                                                      </div>
+
+                                                      <div
+                                                        class="hero-card absolute inset-0 translate-x-20 translate-y-10 rotate-[13deg] rounded-[20px] bg-[#d8cbb5]">
+                                                        <div
+                                                          class="absolute right-10 top-24 font-serif text-[110px] text-[#ff5a1f]/80">
+                                                          A
+                                                        </div>
+                                                        <div
+                                                          class="absolute bottom-12 left-10 h-32 w-32 rounded-full border border-black/20">
+                                                        </div>
+                                                      </div>
+
+                                                      <div
+                                                        class="hero-card absolute inset-0 translate-x-32 translate-y-20 rotate-[18deg] rounded-[20px] bg-[#080808]">
+                                                        <div
+                                                          class="h-full w-full rounded-[20px] bg-[linear-gradient(135deg,rgba(255,255,255,.16),transparent_45%)]">
+                                                        </div>
+                                                      </div>
+
+                                                      <div
+                                                        class="hero-card absolute inset-0 rotate-[4deg] overflow-hidden rounded-[20px] bg-[#201714]">
+                                                        <img
+                                                          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09c772e4-09b6-4912-a345-460bbfbe16ce_1600w.png"
+                                                          alt="Shayan - Freelance Web Developer and B2B Web Consultant USA"
+                                                          class="h-full w-full object-cover saturate-125">
+                                                        <div
+                                                          class="absolute inset-0 bg-gradient-to-t from-black/48 via-transparent to-orange-950/10">
+                                                        </div>
+                                                        <div class="absolute inset-0 bg-[#ff5a1f]/10 mix-blend-overlay">
+                                                        </div>
+                                                      </div>
+
+                                                      <button
+                                                        class="hero-cta absolute right-[-22px] top-1/2 z-20 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/80 text-white shadow-2xl backdrop-blur transition duration-300 hover:scale-110 hover:bg-[#ff5a1f]"
+                                                        aria-label="Explore">
+                                                        <i data-lucide="arrow-right" class="h-7 w-7"></i>
+                                                      </button>
+                                                    </div>
+
+                                                    <h1
+                                                      class="hero-wordmark wordmark pointer-events-none absolute -bottom-5 left-2 z-0 select-none text-[23vw] font-black leading-none text-[#e8e0d4] md:-bottom-12 lg:left-6 lg:text-[20vw]">
+                                                      Shayan.
+                                                    </h1>
+
+                                                    <div
+                                                      class="hero-meta glass absolute bottom-10 right-5 z-20 hidden w-[270px] rounded-[24px] p-6 md:right-8 lg:block">
+                                                      <div class="mb-8 text-2xl text-[#ff5a1f]">
+                                                        ✳
+                                                      </div>
+                                                      <p class="text-[19px] leading-[1.25] tracking-[-0.04em]">
+                                                        Built with care. Designed with
+                                                        purpose.
+                                                      </p>
+                                                      <div
+                                                        class="mt-10 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/45">
+                                                        <span>Available</span>
+                                                        <span class="h-1 w-1 rounded-full bg-[#ff5a1f]"></span>
+                                                        <span>For Work</span>
+                                                      </div>
+                                                    </div>
+                                                  </section>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pin-spacer"
+      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1722px; padding: 0px 0px 902px;">
+      <div class="pin-spacer"
+        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+        <div class="pin-spacer"
+          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+          <div class="pin-spacer"
+            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+            <div class="pin-spacer"
+              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+              <div class="pin-spacer"
+                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                <div class="pin-spacer"
+                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                  <div class="pin-spacer"
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                    <div class="pin-spacer"
+                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                      <div class="pin-spacer"
+                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                        <div class="pin-spacer"
+                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                          <div class="pin-spacer"
+                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                            <div class="pin-spacer"
+                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                              <div class="pin-spacer"
+                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                <div class="pin-spacer"
+                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                  <div class="pin-spacer"
+                                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                    <div class="pin-spacer"
+                                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                      <div class="pin-spacer"
+                                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                        <div class="pin-spacer"
+                                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                          <div class="pin-spacer"
+                                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                            <div class="pin-spacer"
+                                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                              <div class="pin-spacer"
+                                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                                <div class="pin-spacer"
+                                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 820px; padding: 0px;">
+                                                  <section id="services"
+                                                    class="brand-section relative flex min-h-screen items-center overflow-hidden px-5 py-24 md:px-8 lg:px-12"
+                                                    style="inset: 0px auto auto 0px; margin: 0px; max-width: 1265px; width: 1265px; max-height: 820px; height: 820px; padding: 96px 48px;">
+                                                    <h2
+                                                      class="brand-drift wordmark pointer-events-none absolute -top-16 left-0 text-[6rem] font-black leading-none text-[#f3f0e8]/10 sm:text-[9rem] md:text-[13rem] lg:text-[18rem]">
+                                                      Shayan.
+                                                    </h2>
+
+                                                    <div class="mx-auto grid w-full max-w-6xl gap-12 md:grid-cols-12">
+                                                      <div class="md:col-span-4">
+                                                        <p class="section-label">
+                                                          Built for what's next.
+                                                        </p>
+                                                        <p data-reveal=""
+                                                          class="mt-8 max-w-sm text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+                                                          A website should do more
+                                                          than exist. It should tell
+                                                          your story, inspire
+                                                          confidence, and turn
+                                                          visitors into customers.
+                                                          Every project I build
+                                                          combines thoughtful design,
+                                                          clean code, and
+                                                          performance-first
+                                                          development to deliver
+                                                          experiences that feel
+                                                          effortless.
+                                                        </p>
+                                                      </div>
+
+                                                      <div class="brand-words grid gap-6 md:col-span-7 md:col-start-6">
+                                                        <p
+                                                          class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
+                                                          design
+                                                        </p>
+                                                        <p
+                                                          class="brand-word text-right text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
+                                                          develop
+                                                        </p>
+                                                        <p
+                                                          class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
+                                                          optimize.
+                                                        </p>
+                                                        <p
+                                                          class="brand-word text-right text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
+                                                          launch
+                                                        </p>
+                                                        <p
+                                                          class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
+                                                          grow
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  </section>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="services-section relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <div
+        class="absolute left-1/2 top-0 h-[360px] w-[78%] -translate-x-1/2 overflow-hidden rounded-b-[32px] border-x border-b border-[#f3f0e8]/10 md:h-[480px] lg:h-[620px]">
+        <img
+          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3b2725ca-5b05-49fe-b2ff-9de382bf26ef_1600w.webp"
+          alt="High-performance website development assets green glow background"
+          class="strip-image h-full w-full object-cover object-center opacity-70">
+      </div>
+
+      <div class="grid min-h-screen items-center gap-14 md:grid-cols-12">
+        <div data-reveal="" class="md:col-span-3">
+          <p class="section-label mb-20">Services</p>
+          <p class="max-w-60 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+            Professional B2B web development services and tech-stack engineering.
+          </p>
+        </div>
+
+        <div class="md:col-span-6 md:col-start-4">
+          <h2 class="services-copy text-4xl font-semibold leading-[0.95] tracking-[-0.07em] md:text-6xl lg:text-7xl">
+            Custom website development services engineered for B2B growth.
+          </h2>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2">
+            <div class="service-card glass rounded-[28px] p-6">
+              <p class="mb-14 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">
+                01
+              </p>
+              <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+                Web Development
+              </h3>
+              <p class="mt-4 text-sm leading-[1.6] text-[#f3f0e8]/54">
+                Modern websites crafted for speed, scalability, and exceptional user experiences. Specialized as a <a
+                  href="react-development.html"
+                  class="underline text-[#ff5a1f] hover:opacity-80 transition-opacity">React development agency</a> and
+                <a href="wordpress-development.html"
+                  class="underline text-[#ff5a1f] hover:opacity-80 transition-opacity">WordPress development
+                  company</a>.
+              </p>
+            </div>
+            <div class="service-card glass rounded-[28px] p-6">
+              <p class="mb-14 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">
+                02
+              </p>
+              <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+                Performance Optimization
+              </h3>
+              <p class="mt-4 text-sm leading-[1.6] text-[#f3f0e8]/54">
+                Fast-loading experiences designed to improve engagement and
+                conversions.
+              </p>
+            </div>
+            <div class="service-card glass rounded-[28px] p-6">
+              <p class="mb-14 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">
+                03
+              </p>
+              <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+                AI-First Workflows
+              </h3>
+              <p class="mt-4 text-sm leading-[1.6] text-[#f3f0e8]/54">
+                Smarter solutions that help businesses automate, streamline,
+                and grow.
+              </p>
+            </div>
+            <div class="service-card glass rounded-[28px] p-6">
+              <p class="mb-14 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">
+                04
+              </p>
+              <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+                Product Development
+              </h3>
+              <p class="mt-4 text-sm leading-[1.6] text-[#f3f0e8]/54">
+                From concept to launch, every detail is built with intention.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal="" class="md:col-span-2 md:col-start-11">
+          <p class="mb-6 text-xs font-bold uppercase tracking-[0.12em]">
+            Available
+            <span aria-hidden="true">→</span>
+          </p>
+          <p class="max-w-60 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+            Whether you're launching something new or improving something
+            established, I build experiences designed to move businesses
+            forward.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="letschat" class="numbers-intro relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <figure
+        class="parallax-image parallax-slow pointer-events-none md:right-8 md:top-28 md:h-48 md:w-72 w-40 h-28 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/38e3087c-9469-4548-bb3d-7d45defa6c81_800w.png)] bg-cover bg-center top-32 right-4 rotate-[7deg] gap-x-12 gap-y-12">
+        <img
+          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2a6d2145-68de-4484-bde1-e7c84b2b2502_800w.png"
+          alt="Custom B2B website development architecture conceptual layout" class="">
+      </figure>
+
+      <figure
+        class="parallax-image parallax-fast pointer-events-none md:bottom-20 md:left-10 md:h-40 md:w-60 w-36 h-24 bottom-24 left-4 rotate-[-9deg] gap-x-12 gap-y-12">
+        <img
+          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/bb68db84-4141-4849-b241-5c349a01444b_800w.png"
+          alt="Affordable web development services USA project UI showcase" class="">
+      </figure>
+
+      <div class="grid min-h-screen md:grid-cols-12 gap-x-12 gap-y-12 items-center">
+        <div data-reveal="" class="md:col-span-3">
+          <p class="section-label mb-8">Who I Work With</p>
+          <p class="max-w-72 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+            Providing custom website development services in the USA for early-stage startups, SaaS companies, and B2B
+            enterprises. Consultation available for businesses in <a href="new-york-web-development.html"
+              class="underline text-[#ff5a1f] hover:opacity-80 transition-opacity">New York</a>, <a
+              href="austin-web-development.html"
+              class="underline text-[#ff5a1f] hover:opacity-80 transition-opacity">Austin</a>, and other US states.
+          </p>
+          <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em]">
+            Lets chat on fiverr
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+
+        <div data-reveal="" class="md:col-span-5 md:col-start-5">
+          <h2 class="text-6xl font-semibold leading-[0.92] tracking-[-0.08em] md:text-8xl lg:text-9xl">
+            Who I
+            <br>
+            Work With
+          </h2>
+        </div>
+
+        <div class="stat-grid md:col-span-3 md:col-start-10">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="note-card glass rounded-[24px] p-5">
+              <p class="text-5xl font-semibold tracking-[-0.06em]">01</p>
+              <p class="mt-6 text-xs font-medium text-[#f3f0e8]/50">
+                Startups
+              </p>
+            </div>
+            <div class="note-card glass rounded-[24px] p-5">
+              <p class="text-5xl font-semibold tracking-[-0.06em]">02</p>
+              <p class="mt-6 text-xs font-medium text-[#f3f0e8]/50">
+                SaaS Companies
+              </p>
+            </div>
+            <div class="note-card glass rounded-[24px] p-5">
+              <p class="text-5xl font-semibold tracking-[-0.06em]">03</p>
+              <p class="mt-6 text-xs font-medium text-[#f3f0e8]/50">
+                Agencies
+              </p>
+            </div>
+            <div class="note-card glass rounded-[24px] p-5">
+              <p class="text-5xl font-semibold tracking-[-0.06em]">04</p>
+              <p class="mt-6 text-xs font-medium text-[#f3f0e8]/50">
+                E-commerce Brands
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELD ARCHIVE SCROLL -->
+    <section class="archive-scroll-section relative overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-12">
+        <div class="md:col-span-3">
+          <p class="section-label">Selected Work</p>
+          <p class="mt-8 max-w-64 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+            A glimpse into recent digital experiences and product surfaces.
+          </p>
+        </div>
+
+        <div class="md:col-span-8 md:col-start-5">
+          <h2
+            class="archive-title text-[54px] font-black leading-[0.9] tracking-[-0.08em] text-[#f3f0e8] md:text-[86px] lg:text-[112px]">
+            Built to be maintainable, scalable, and reliable.
+          </h2>
+        </div>
+      </div>
+
+      <div class="archive-gallery mt-20 flex gap-5 will-change-transform">
+        <figure
+          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2e233402-8ffe-41e4-b55c-d3c2384436ff_1600w.png"
+            alt="Barazi CPA custom WordPress website development company USA mockup"
+            class="h-full w-full object-cover opacity-75">
+        </figure>
+
+        <figure
+          class="archive-card mt-20 h-[360px] w-[300px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[460px] md:w-[360px] group relative cursor-pointer"
+          onclick="openVideoModal('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801')">
+          <video
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801"
+            poster="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f40546b7-20d7-4568-851a-df21a32472f6_1600w.png"
+            aria-label="Archive video"
+            class="h-full w-full object-contain opacity-80 cursor-pointer scale-105 transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 group-hover:opacity-100"
+            style="will-change: transform, opacity" muted="" playsinline="" loop="" onmouseenter="this.play()"
+            onmouseleave="this.pause();"></video>
+        </figure>
+
+        <figure
+          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b31a24c8-c70e-4032-81eb-81b3d9c35bbb_800w.png"
+            alt="Food truck custom React development agency USA application design"
+            class="opacity-75 w-full h-full object-contain">
+        </figure>
+
+        <figure
+          class="archive-card mt-28 h-[360px] w-[300px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[460px] md:w-[360px]">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/88578977-576e-4c52-9624-aa1fa34eae22_800w.png"
+            alt="B2B web development services USA portfolio showcase layout"
+            class="opacity-75 w-full h-full object-contain">
+        </figure>
+
+        <figure
+          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e1f39209-cbcc-4857-bc13-744562e16d78_3840w.png"
+            alt="Responsive web developer USA client work showcase mockup"
+            class="h-full w-full object-cover opacity-75">
+        </figure>
+      </div>
+    </section>
+
+
+    <div class="pin-spacer"
+      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+      <div class="pin-spacer"
+        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+        <div class="pin-spacer"
+          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+          <div class="pin-spacer"
+            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+            <div class="pin-spacer"
+              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+              <div class="pin-spacer"
+                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                <div class="pin-spacer"
+                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                  <div class="pin-spacer"
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                    <div class="pin-spacer"
+                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                      <div class="pin-spacer"
+                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                        <div class="pin-spacer"
+                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                          <div class="pin-spacer"
+                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                            <div class="pin-spacer"
+                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                              <div class="pin-spacer"
+                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                <div class="pin-spacer"
+                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                  <div class="pin-spacer"
+                                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                    <div class="pin-spacer"
+                                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                      <div class="pin-spacer"
+                                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                        <div class="pin-spacer"
+                                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                          <div class="pin-spacer"
+                                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                            <div class="pin-spacer"
+                                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                              <div class="pin-spacer"
+                                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                                <div class="pin-spacer"
+                                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1996px; padding: 0px 0px 984px;">
+                                                  <section id="work"
+                                                    class="work-section relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12"
+                                                    style="inset: 0px auto auto 0px; margin: 0px; max-width: 1265px; width: 1265px; max-height: 1012px; height: 1012px; padding: 96px 48px;">
+                                                    <div class="grid min-h-screen items-center gap-12 md:grid-cols-12">
+                                                      <div class="work-copy md:col-span-3">
+                                                        <p class="section-label mb-8">
+                                                          Projects
+                                                        </p>
+                                                        <h2
+                                                          class="text-5xl font-semibold leading-[0.95] tracking-[-0.08em] md:text-6xl">
+                                                          Selected Work
+                                                        </h2>
+                                                        <p
+                                                          class="mt-6 max-w-72 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+                                                          SaaS Platforms, E-commerce
+                                                          Experiences, and Business
+                                                          Websites built to drive
+                                                          growth and improve user
+                                                          engagement.
+                                                        </p>
+                                                        <a href="https://github.com/shayn468"
+                                                          class="magnetic-button mt-8 inline-flex rounded-full border border-[#f3f0e8]/12 px-5 py-3 text-xs font-bold uppercase tracking-[0.12em]">
+                                                          View GitHub
+                                                        </a>
+                                                      </div>
+
+                                                      <div class="relative md:col-span-7 md:col-start-4">
+                                                        <div
+                                                          class="relative flex min-h-[520px] items-center justify-center">
+                                                          <span
+                                                            class="masked-number text-[13rem] font-black leading-none tracking-[-0.09em] md:text-[24rem] lg:text-[29rem]"
+                                                            style="--number-image: url('Cafe.png'); background-position: 20% 80%;">
+                                                            06
+                                                          </span>
+                                                          <img src="Pickleball.png"
+                                                            alt="Custom Pickleball web app development using React"
+                                                            class="project-card absolute left-0 top-14 hidden h-44 w-72 rotate-[-14deg] rounded-[18px] border border-[#f3f0e8]/10 object-cover md:block">
+                                                          <img src="quantum.png"
+                                                            alt="Quantum brand custom website development services"
+                                                            class="project-card absolute right-4 top-6 hidden h-44 w-72 rotate-[10deg] rounded-[18px] border border-[#f3f0e8]/10 object-cover md:block">
+                                                        </div>
+                                                      </div>
+
+                                                      <div data-reveal="" class="md:col-span-2">
+                                                        <p
+                                                          class="text-xs font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/62">
+                                                          Roles
+                                                        </p>
+                                                        <p
+                                                          class="mt-8 text-sm font-medium leading-[1.7] text-[#f3f0e8]/50">
+                                                          Full-Stack Development,
+                                                          Frontend, UI/UX
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  </section>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIELD NOTES -->
+    <section class="partners-section relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <h2
+        class="partners-heading pointer-events-none absolute left-5 top-16 text-[18vw] font-black leading-none tracking-[-0.1em] text-[#f3f0e8]/[0.055] md:left-8 md:top-10 md:text-[15vw]">
+        Experience
+      </h2>
+
+      <figure
+        class="parallax-image parallax-slow pointer-events-none absolute right-5 top-28 hidden h-44 w-72 rotate-[5deg] overflow-hidden rounded-[28px] border border-[#f3f0e8]/10 md:block lg:right-14 lg:h-56 lg:w-96">
+        <img
+          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92ae1957-bb5d-4fef-b4fe-26a43ca6c254_3840w.png"
+          alt="B2B web development agency team studio workspace detail" class="h-full w-full object-cover">
+      </figure>
+
+      <div class="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center">
+        <div class="mb-16 grid gap-8 md:grid-cols-12">
+          <div class="md:col-span-3">
+            <p class="section-label">Experience</p>
+          </div>
+
+          <div class="md:col-span-7 md:col-start-5">
+            <h2
+              class="text-[52px] font-black leading-[0.9] tracking-[-0.08em] text-[#f3f0e8] md:text-[84px] lg:text-[104px]">
+              Six years of building digital experiences that drive growth.
+            </h2>
+          </div>
+        </div>
+
+        <div class="partner-logos grid grid-cols-1 gap-5 md:grid-cols-12">
+          <article
+            class="note-card group relative min-h-[430px] overflow-hidden rounded-[38px] border border-[#f3f0e8]/10 bg-[#f3f0e8] p-8 text-[#060706] md:col-span-5">
+            <div
+              class="absolute -right-6 -top-8 text-[180px] font-black leading-none tracking-[-0.12em] text-[#060706]/[0.06]">
+              01
+            </div>
+            <div class="relative z-10 flex h-full flex-col justify-between">
+              <div class="">
+                <p class="text-xs font-black uppercase tracking-[0.18em] text-[#060706]/45">
+                  2022 — Present
+                </p>
+                <h3 class="mt-12 max-w-sm text-[50px] font-black leading-[0.88] tracking-[-0.08em] md:text-[64px]">
+                  Full-Stack Developer
+                </h3>
+              </div>
+              <p class="max-w-sm text-base font-semibold leading-[1.55] text-[#060706]/62">
+                Building modern applications and providing development
+                services for businesses looking to scale their digital
+                products.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="note-card group relative min-h-[430px] overflow-hidden rounded-[38px] border border-[#f3f0e8]/10 bg-[#111612] md:col-span-4">
+            <img src="Showcase.png" alt="Custom website development project showcase design screenshot"
+              class="h-full w-full object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/25 to-transparent"></div>
+            <div class="absolute bottom-7 left-7 right-7">
+              <p class="text-xs font-black uppercase tracking-[0.18em] text-[#f3f0e8]/50">
+                2024 — Present
+              </p>
+              <h3 class="mt-5 text-[34px] font-black leading-[0.92] tracking-[-0.07em] text-[#f3f0e8]">
+                Web &amp; AI Solutions Developer
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="note-card relative min-h-[430px] overflow-hidden rounded-[38px] border border-[#f3f0e8]/10 bg-white/[0.035] p-7 md:col-span-3">
+            <p class="text-xs font-black uppercase tracking-[0.18em] text-[#f3f0e8]/42">
+              Focus
+            </p>
+            <div class="mt-10 space-y-5">
+              <div class="border-b border-[#f3f0e8]/10 pb-5">
+                <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f3f0e8]/32">
+                  01
+                </p>
+                <p class="mt-2 text-2xl font-black tracking-[-0.06em]">
+                  Web Apps
+                </p>
+              </div>
+              <div class="border-b border-[#f3f0e8]/10 pb-5">
+                <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f3f0e8]/32">
+                  02
+                </p>
+                <p class="mt-2 text-2xl font-black tracking-[-0.06em]">
+                  Mobile Apps
+                </p>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f3f0e8]/32">
+                  03
+                </p>
+                <p class="mt-2 text-2xl font-black tracking-[-0.06em]">
+                  AI Technologies
+                </p>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-7 left-7 right-7">
+              <p class="text-sm font-medium leading-[1.65] text-[#f3f0e8]/56">
+                API Integration, React State Management, and User Experience.
+              </p>
+            </div> -->
+          </article>
+
+          <article
+            class="note-card group relative overflow-hidden rounded-[38px] border border-[#f3f0e8]/10 bg-[#0c0f0c] p-8 md:col-span-7">
+            <div class="absolute right-8 top-8 h-24 w-24 rounded-full border border-[#f3f0e8]/10"></div>
+            <div class="absolute right-14 top-14 h-12 w-12 rounded-full border border-[#f3f0e8]/10"></div>
+            <div class="relative z-10 grid gap-8 md:grid-cols-12">
+              <div class="md:col-span-4">
+                <p class="text-xs font-black uppercase tracking-[0.18em] text-[#f3f0e8]/42">
+                  2020 —present
+                </p>
+              </div>
+              <div class="md:col-span-8">
+                <h3
+                  class="max-w-2xl text-[44px] font-black leading-[0.9] tracking-[-0.08em] text-[#f3f0e8] md:text-[64px]">
+                  Freelance Web Consultant
+                </h3>
+                <p class="mt-7 max-w-lg text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+                  Working remotely with clients across industries to deliver
+                  web and mobile solutions focused on usability, performance,
+                  and growth.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="note-card relative overflow-hidden rounded-[38px] border border-[#f3f0e8]/10 bg-[#ff5a1f] p-8 text-[#060706] md:col-span-5">
+            <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#060706]/10"></div>
+            <p class="text-xs font-black uppercase tracking-[0.18em] text-[#060706]/50">
+              Why Clients Choose Me
+            </p>
+            <h3 class="mt-12 max-w-sm text-[42px] font-black leading-[0.9] tracking-[-0.08em] md:text-[58px]">
+              Fast Execution &amp; Clean Code
+            </h3>
+            <p class="mt-8 max-w-sm text-sm font-semibold leading-[1.65] text-[#060706]/62">
+              Moving ideas from concept to launch efficiently.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <figure
+        class="parallax-image parallax-slow pointer-events-none right-4 top-24 h-28 w-44 rotate-[4deg] md:right-8 md:top-20 md:h-56 md:w-80">
+        <img
+          src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e1f39209-cbcc-4857-bc13-744562e16d78_3840w.png"
+          alt="Freelance web developer USA planning collaborative session workspace">
+      </figure>
+
+      <div data-reveal="" class="mb-16 max-w-2xl">
+        <p class="section-label mb-8">About</p>
+        <h2 class="text-6xl font-semibold leading-[0.95] tracking-[-0.08em] md:text-8xl">
+          Exceptional experiences feel effortless.
+        </h2>
+        <p class="mt-6 max-w-md text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+          For over six years, I've been helping businesses turn ideas into
+          experiences that people enjoy using.
+        </p>
+      </div>
+
+      <div class="relative h-72 overflow-hidden rounded-[32px] border border-[#f3f0e8]/10 bg-white/[0.025]">
+        <div class="timeline-bar absolute left-0 top-10 h-7 w-1/4 rounded-r-full text-[#060706]">
+          <span class="ml-4 text-xs font-bold leading-7">Fast</span>
+        </div>
+        <div class="timeline-bar absolute left-[18%] top-24 h-7 w-1/4 rounded-r-full text-[#060706]">
+          <span class="ml-4 text-xs font-bold leading-7">Clean</span>
+        </div>
+        <div class="timeline-bar absolute left-[36%] top-[9.5rem] h-7 w-1/3 rounded-r-full text-[#060706]">
+          <span class="ml-4 text-xs font-bold leading-7">Smart</span>
+        </div>
+        <div class="timeline-bar absolute left-[62%] top-52 h-7 w-1/3 rounded-r-full text-[#060706]">
+          <span class="ml-4 text-xs font-bold leading-7">Scale</span>
+        </div>
+        <div class="grid h-full grid-cols-4 divide-x divide-[#f3f0e8]/10"></div>
+      </div>
+
+      <div class="process-columns mt-8 grid gap-4 md:grid-cols-4">
+        <div class="glass rounded-[28px] p-6">
+          <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+            Fast Execution
+          </h3>
+          <p class="mt-5 text-sm leading-[1.65] text-[#f3f0e8]/56">
+            Moving ideas from concept to launch efficiently.
+          </p>
+        </div>
+        <div class="glass rounded-[28px] p-6">
+          <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+            Pixel-Perfect
+          </h3>
+          <p class="mt-5 text-sm leading-[1.65] text-[#f3f0e8]/56">
+            Attention to detail in every interaction.
+          </p>
+        </div>
+        <div class="glass rounded-[28px] p-6">
+          <h3 class="text-2xl font-semibold tracking-[-0.05em]">
+            Clean Code
+          </h3>
+          <p class="mt-5 text-sm leading-[1.65] text-[#f3f0e8]/56">
+            Built to be maintainable, scalable, and reliable.
+          </p>
+        </div>
+        <div class="glass rounded-[28px] p-6">
+          <h3 class="text-2xl font-semibold tracking-[-0.05em]">AI-First</h3>
+          <p class="mt-5 text-sm leading-[1.65] text-[#f3f0e8]/56">
+            Leveraging modern tools to create smarter workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="pin-spacer"
+      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+      <div class="pin-spacer"
+        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+        <div class="pin-spacer"
+          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+          <div class="pin-spacer"
+            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+            <div class="pin-spacer"
+              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+              <div class="pin-spacer"
+                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                <div class="pin-spacer"
+                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                  <div class="pin-spacer"
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                    <div class="pin-spacer"
+                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                      <div class="pin-spacer"
+                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                        <div class="pin-spacer"
+                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                          <div class="pin-spacer"
+                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                            <div class="pin-spacer"
+                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                              <div class="pin-spacer"
+                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                <div class="pin-spacer"
+                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                  <div class="pin-spacer"
+                                    style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                    <div class="pin-spacer"
+                                      style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                      <div class="pin-spacer"
+                                        style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                        <div class="pin-spacer"
+                                          style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                          <div class="pin-spacer"
+                                            style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                            <div class="pin-spacer"
+                                              style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                              <div class="pin-spacer"
+                                                style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                                <div class="pin-spacer"
+                                                  style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1265px; height: 1636px; padding: 0px 0px 656px;">
+                                                  <section id="testimonials"
+                                                    class="pricing-section relative min-h-screen px-5 py-24 md:px-8 lg:px-12"
+                                                    style="inset: 0px auto auto 0px; margin: 0px; max-width: 1265px; width: 1265px; max-height: 980px; height: 980px; padding: 96px 48px;">
+                                                    <div class="grid gap-12 md:grid-cols-12">
+                                                      <div class="pricing-copy md:col-span-4">
+                                                        <p class="section-label mb-8">
+                                                          Testimonials
+                                                        </p>
+                                                        <h2
+                                                          class="text-6xl font-semibold leading-[0.95] tracking-[-0.08em] md:text-8xl">
+                                                          What People Say
+                                                        </h2>
+                                                        <p
+                                                          class="mt-6 max-w-72 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+                                                          Feedback from founders and
+                                                          partners I've worked with.
+                                                        </p>
+                                                      </div>
+
+                                                      <div class="pricing-list grid gap-5 md:col-span-7 md:col-start-6">
+                                                        <!-- <div class="pricing-card glass rounded-[36px] p-8"> -->
+                                                        <!-- <div class="flex items-baseline gap-3">
+                                                            <p class="text-4xl font-semibold tracking-[-0.06em]">
+                                                              $4,800
+                                                            </p>
+                                                            <p
+                                                              class="text-xl font-semibold tracking-tight text-[#f3f0e8]/38">
+                                                              /sprint
+                                                            </p>
+                                                            <p
+                                                              class="text-sm font-semibold text-[#f3f0e8]/34 line-through">
+                                                              $6,000
+                                                            </p>
+                                                          </div> -->
+                                                        <!-- <h3
+                                                            class="mt-12 text-4xl font-semibold tracking-[-0.07em] md:text-6xl">
+                                                            Founder
+                                                          </h3>
+                                                          <div class="mt-8 grid gap-4 md:grid-cols-2">
+                                                            <p
+                                                              class="text-2xl font-medium leading-[1.5] text-[#f3f0e8]/80">
+                                                              "Shayan is an increase guy to work with. Your search for a
+                                                              developer stops here, stop wasting your time. Shayan is
+                                                              your man."
+                                                            </p>
+                                                          </div>
+                                                        </div> -->
+
+                                                        <div class="pricing-card glass rounded-[36px] p-8">
+                                                          <div class="flex items-baseline gap-3">
+                                                            <p
+                                                              class="text-2xl font-medium leading-[1.5] text-[#f3f0e8]/80">
+                                                              "Shayan is an increase guy to work with. Your search for
+                                                              a
+                                                              developer stops here, stop wasting your time. Shayan is
+                                                              your man.
+                                                            </p>
+                                                          </div>
+                                                          <h3
+                                                            class="mt-12 text-xl font-semibold tracking-[-0.07em] md:text-4xl">
+                                                            Founder
+                                                          </h3>
+                                                        </div>
+                                                        <div class="pricing-card glass rounded-[36px] p-8">
+                                                          <div class="flex items-baseline gap-3">
+                                                            <p
+                                                              class="text-2xl font-medium leading-[1.5] text-[#f3f0e8]/80">
+                                                              "More like a partner than a service ! Well done"
+                                                            </p>
+                                                          </div>
+                                                          <h3
+                                                            class="mt-12 text-xl font-semibold tracking-[-0.07em] md:text-4xl">
+                                                            A senior fund structuring and expansion expert
+                                                          </h3>
+                                                          <img src="Nicolas.jpg" alt="Founder"
+                                                            class="mt-6 w-16 h-16 rounded-full object-cover" />
+
+                                                        </div>
+                                                      </div>
+                                                      <div class="pricing-see-more md:col-span-9">
+
+                                                        <a href="https://fiverr.com/shayn_dev" target="_blank"
+                                                          rel="noopener noreferrer"
+                                                          class="mt-8 flex w-full justify-end items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em]">
+                                                          See More
+                                                          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                  </section>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer-section relative min-h-screen overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-3">
+          <p class="section-label">Shayan</p>
+        </div>
+        <div class="md:col-span-9">
+          <h2
+            class="footer-wordmark wordmark text-[5rem] font-black leading-none sm:text-[8rem] md:text-[11rem] lg:text-[14rem]">
+            Shayan
+          </h2>
+        </div>
+      </div>
+
+      <div class="absolute right-5 top-28 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44 md:right-8">
+        © 2026
+      </div>
+
+      <div
+        class="footer-links absolute bottom-16 left-5 right-5 grid gap-10 border-t border-[#f3f0e8]/12 pt-10 md:left-8 md:right-8 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
+            Freelance Web Consultant / 2026
+          </p>
+          <h3
+            class="max-w-xl text-[42px] font-extrabold leading-[0.92] tracking-tight text-[#f3f0e8] md:text-[64px] lg:text-[76px]"
+            style=" letter-spacing: -0.12em;">
+            Websites
+            <br>
+            that help
+            <br class="hidden md:block">
+            businesses grow.
+          </h3>
+
+          <div class="mt-10 grid max-w-lg grid-cols-2 border-y border-[#f3f0e8]/12 py-5">
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f3f0e8]/34">
+                Name
+              </p>
+              <p class="mt-2 text-sm font-semibold text-[#f3f0e8]/78">
+                Shayan.
+              </p>
+            </div>
+            <div class="">
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f3f0e8]/34">
+                Role
+              </p>
+              <p class="mt-2 text-sm font-semibold text-[#f3f0e8]/78">
+                Web Consultant
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 md:col-start-7">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
+            About
+          </p>
+          <p class="mt-6 text-sm font-medium leading-[1.75] text-[#f3f0e8]/58">
+            Every project I build combines thoughtful design, clean code, and
+            performance-first development to deliver experiences that feel
+            effortless.
+          </p>
+
+          <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer"
+            class="group mt-9 flex items-center justify-between border-b border-[#f3f0e8]/14 pb-4 text-sm font-bold text-[#f3f0e8] transition hover:border-[#f3f0e8]/40">
+            Get in Touch
+            <span class="transition duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </a>
+
+          <a href="#"
+            class="group mt-4 flex items-center justify-between border-b border-[#f3f0e8]/14 pb-4 text-sm font-bold text-[#f3f0e8]/62 transition hover:border-[#f3f0e8]/40 hover:text-[#f3f0e8]">
+            View GitHub
+            <span class="transition duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </a>
+        </div>
+
+        <!-- <div class="grid gap-10 md:col-span-2 md:col-start-11">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
+              Social
+            </p>
+            <div class="mt-6 space-y-4 text-sm font-bold text-[#f3f0e8]/72">
+              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
+                LinkedIn
+                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
+                  add↗
+                </span>
+              </a>
+              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
+                GitHub
+                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
+                  ↗
+                </span>
+              </a>
+              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
+                Fiverr
+                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
+                  ↗
+                </span>
+              </a>
+            </div>
+          </div> -->
+
+        <!-- <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
+              Legal
+            </p>
+            <div class="mt-6 space-y-3 text-sm font-semibold text-[#f3f0e8]/50">
+              <a href="#" class="block transition hover:text-[#f3f0e8]">
+                Privacy Policy
+              </a>
+              <a href="#" class="block transition hover:text-[#f3f0e8]">
+                Terms of Service
+              </a>
+              <a href="#" class="block transition hover:text-[#f3f0e8]">
+                404
+              </a>
+            </div>
+          </div> -->
+      </div>
+
+      <div class="md:col-span-12">
+        <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-[#f3f0e8]/12 pt-5">
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3f0e8]/34">
+            © 2026 Shayan.
+          </p>
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3f0e8]/34">
+            Freelance Web Consultant
+          </p>
+        </div>
+      </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!prefersReducedMotion && window.gsap && window.ScrollTrigger && window.Lenis) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.defaults({ ease: "power3.out" });
+
+      const lenis = new Lenis({
+        duration: 1.05,
+        smoothWheel: true,
+        wheelMultiplier: 0.85,
+        touchMultiplier: 1.15
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => lenis.raf(time * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      // ---- On-load: brand preloader -> hero entrance ----
+      const axLoader = document.getElementById("ax-loader");
+
+      if (lenis && axLoader) {
+        lenis.stop();
+      }
+
+      const loadTl = gsap.timeline({ paused: true });
+
+      loadTl
+        .from("header", { y: -24, opacity: 0, duration: 0.75 })
+        .from(".hero-copy > *", { y: 28, opacity: 0, stagger: 0.09, duration: 0.8 }, "-=0.35")
+        .from(".hero-card", { y: 90, opacity: 0, rotate: 0, scale: 0.94, stagger: 0.08, duration: 1.05 }, "-=0.55")
+        .from(".hero-cta", { scale: 0, opacity: 0, duration: 0.6 }, "-=0.45")
+        .from(".hero-wordmark", { yPercent: 18, opacity: 0, duration: 1 }, "-=0.7")
+        .from(".hero-meta", { y: 24, opacity: 0, duration: 0.75 }, "-=0.65");
+
+      if (axLoader) {
+        const brandEl = axLoader.querySelector(".ax-loader__brand");
+        const barEl = axLoader.querySelector(".ax-loader__bar");
+        const metaEl = axLoader.querySelector(".ax-loader__meta");
+        const pctEl = axLoader.querySelector(".ax-loader__pct");
+        const counter = { v: 0 };
+
+        gsap.timeline({
+          defaults: { ease: "power3.out" },
+          onComplete() {
+            axLoader.remove();
+            lenis.start();
+            ScrollTrigger.refresh();
+          }
+        })
+          .to(brandEl, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "power2.out" }, 0)
+          .to(metaEl, { opacity: 1, duration: 0.6 }, 0.3)
+          .to(barEl, { scaleX: 1, duration: 1.1, ease: "power2.inOut" }, 0.2)
+          .to(counter, {
+            v: 100,
+            duration: 1.1,
+            ease: "power2.inOut",
+            onUpdate() {
+              pctEl.textContent = String(Math.round(counter.v)).padStart(3, "0");
+            }
+          }, 0.2)
+          .to([brandEl, metaEl], { opacity: 0, y: -20, filter: "blur(8px)", duration: 0.5, ease: "power2.in" }, "+=0.15")
+          .to(axLoader, { yPercent: -100, duration: 0.9, ease: "power4.inOut" }, "<0.1")
+          .add(() => { loadTl.play(); }, "<0.35");
+      } else {
+        loadTl.play();
+        lenis.start();
+      }
+
+      // Universal soft reveals
+      gsap.utils.toArray("[data-reveal], .reveal").forEach((item) => {
+        gsap.to(item, {
+          opacity: 1,
+          y: 0,
+          duration: .9,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 84%",
+            toggleActions: "play none none reverse"
+          }
+        });
+      });
+
+      // Hero pinned cinematic transformation
+      const hero = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero-section",
+          start: "top top",
+          end: "+=115%",
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1
+        }
+      });
+
+      hero
+        .to(".hero-wordmark", { yPercent: -50, scale: 1.07, opacity: .86, duration: 1 }, 0)
+        .to(".hero-copy", { y: -60, opacity: .42, duration: 1 }, 0)
+        .to(".hero-meta", { y: -34, opacity: .72, duration: 1 }, 0)
+        .to(".hero-stack", { y: -70, scale: .94, duration: 1 }, 0)
+        .to(".hero-card:nth-child(1)", { x: -46, y: 34, rotate: -24, duration: 1 }, 0)
+        .to(".hero-card:nth-child(2)", { x: 42, y: -34, rotate: 20, duration: 1 }, 0)
+        .to(".hero-card:nth-child(3)", { x: 54, y: 22, rotate: 22, duration: 1 }, 0)
+        .to(".hero-card:nth-child(4)", { x: 8, y: 12, rotate: 0, duration: 1 }, 0);
+
+      // Studio pinned word rhythm
+      const brand = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".brand-section",
+          start: "top top",
+          end: "+=110%",
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1
+        }
+      });
+
+      brand
+        .fromTo(".brand-drift", { xPercent: 4 }, { xPercent: -22, duration: 1 }, 0)
+        .fromTo(".brand-word", {
+          opacity: 0,
+          y: 80,
+          x: (i) => (i % 2 ? -90 : 90)
+        }, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          stagger: .08,
+          duration: .6
+        }, .08)
+        .to(".brand-word", {
+          x: (i) => (i % 2 ? -34 : 34),
+          stagger: .04,
+          duration: .45
+        }, .64);
+
+      // Services reveal and image strip motion
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".services-section",
+          start: "top 65%",
+          end: "bottom 30%",
+          scrub: 1
+        }
+      })
+        .from(".services-copy", { y: 90, opacity: 0, duration: .35 })
+        .from(".service-card", { y: 42, opacity: 0, stagger: .08, duration: .45 }, .16)
+        .to(".strip-image", { xPercent: -14, scale: 1.22, duration: .8 }, 0);
+
+      // Parallax media
+      gsap.utils.toArray(".parallax-image").forEach((item) => {
+        const isFast = item.classList.contains("parallax-fast");
+        const section = item.closest("section");
+
+        gsap.fromTo(item, { y: isFast ? 90 : 50 }, {
+          y: isFast ? -120 : -70,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+
+        const img = item.querySelector("img");
+        if (img) {
+          gsap.fromTo(img, { scale: 1.18, yPercent: isFast ? -8 : -5 }, {
+            scale: 1.04,
+            yPercent: isFast ? 8 : 5,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true
+            }
+          });
+        }
+      });
+
+      // Stats stagger
+      gsap.from(".stat-grid .note-card", {
+        y: 52,
+        opacity: 0,
+        stagger: .08,
+        duration: .8,
+        scrollTrigger: {
+          trigger: ".numbers-intro",
+          start: "top 58%",
+          toggleActions: "play none none reverse"
+        }
+      });
+
+      // Archive scroll
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".archive-scroll-section",
+          start: "top 75%",
+          end: "bottom 20%",
+          scrub: 1
+        }
+      })
+        .from(".archive-title", { y: 80, opacity: 0, duration: 0.45 }, 0)
+        .from(".archive-card", {
+          y: 100,
+          opacity: 0,
+          rotate: (i) => [-3, 2, -2, 3, -1][i],
+          stagger: 0.08,
+          duration: 0.65
+        }, 0.12)
+        .to(".archive-gallery", { xPercent: -18, duration: 1 }, 0.25)
+        .to(".archive-card img", { scale: 1.18, duration: 1 }, 0.25);
+
+      // Work pinned number
+      const work = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: "+=120%",
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1
+        }
+      });
+
+      work
+        .from(".work-copy", { x: -80, opacity: 0, duration: .4 }, 0)
+        .fromTo(".masked-number", { scale: .82, y: 80, backgroundPosition: "50% 28%" }, { scale: 1.1, y: -50, backgroundPosition: "50% 74%", duration: 1 }, 0)
+        .from(".project-card", { y: 80, opacity: 0, rotate: 0, stagger: .1, duration: .4 }, .15)
+        .to(".project-card", { y: -40, x: (i) => (i ? 42 : -34), duration: .8 }, .45);
+
+      // Field notes editorial
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".partners-section",
+          start: "top 72%",
+          end: "bottom 28%",
+          scrub: 1
+        }
+      })
+        .fromTo(".partners-heading", { yPercent: 10, opacity: 0.06 }, { yPercent: -16, opacity: 0.12, duration: 1 }, 0)
+        .from(".partners-section .section-label", { y: 24, opacity: 0, duration: 0.35 }, 0.08)
+        .from(".partners-section h2:not(.partners-heading)", { y: 70, opacity: 0, duration: 0.55 }, 0.12)
+        .from(".partner-logos .note-card", {
+          y: 100,
+          opacity: 0,
+          rotate: (i) => [-2, 2, -1, 1, -2][i],
+          stagger: 0.08,
+          duration: 0.7
+        }, 0.2)
+        .to(".partner-logos .note-card", {
+          y: (i) => [-24, 18, -12, 14, -18][i],
+          stagger: 0.04,
+          duration: 0.55
+        }, 0.62);
+
+      // Timeline process
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".process-section",
+          start: "top 60%",
+          end: "bottom 40%",
+          scrub: 1
+        }
+      })
+        .to(".timeline-bar", { scaleX: 1, stagger: .12, duration: .6 }, 0)
+        .from(".process-columns > div", { y: 38, opacity: 0, stagger: .08, duration: .45 }, .25);
+
+      // Pricing pin on desktop only
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".pricing-section",
+          start: "top top",
+          end: "+=80%",
+          scrub: 1,
+          pin: window.innerWidth >= 768,
+          anticipatePin: 1
+        }
+      })
+        .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
+        .from(".pricing-card", { x: 110, opacity: 0, stagger: .16, duration: .55 }, .12)
+        .from(".pricing-see-more", { opacity: 0, y: 30, duration: .4 }, .45);
+
+      // Contact / footer
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".contact-section",
+          start: "top 62%",
+          end: "bottom 34%",
+          scrub: 1
+        }
+      })
+        .from(".contact-form > *", { y: 36, opacity: 0, stagger: .07, duration: .45 }, 0)
+        .from(".faq-row", { y: 38, opacity: 0, stagger: .08, duration: .45 }, .12);
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".footer-section",
+          start: "top 72%",
+          end: "bottom bottom",
+          scrub: 1
+        }
+      })
+        .fromTo(".footer-wordmark", { scale: 0.9, y: 120, opacity: 0.35 }, { scale: 1, y: 0, opacity: 1, duration: 0.9 }, 0)
+        .from(".footer-links", { y: 80, opacity: 0, duration: 0.5 }, 0.2)
+        .from(".footer-links h3", { y: 60, opacity: 0, letterSpacing: "-0.12em", duration: 0.45 }, 0.3)
+        .from(".footer-links a", { y: 18, opacity: 0, stagger: 0.04, duration: 0.3 }, 0.45);
+
+      window.addEventListener("load", () => ScrollTrigger.refresh());
+      window.addEventListener("resize", () => ScrollTrigger.refresh());
+
+    } else {
+      document.getElementById("ax-loader")?.remove();
+
+      document.querySelectorAll(".reveal, [data-reveal]").forEach((item) => {
+        item.style.opacity = "1";
+        item.style.transform = "none";
+      });
+
+      document.querySelectorAll(".timeline-bar").forEach((item) => {
+        item.style.transform = "scaleX(1)";
+      });
+    }
+  </script>
+
+  <div id="video-modal"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-[#060706]/95 opacity-0 backdrop-blur-2xl transition-opacity duration-500"
+    onclick="closeVideoModal()">
+    <div id="video-modal-content"
+      class="relative mx-4 max-h-[90vh] w-full max-w-6xl scale-95 transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+      onclick="event.stopPropagation()">
+      <button onclick="closeVideoModal()"
+        class="absolute -top-16 right-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:text-[#ff5a1f] md:-right-16 md:top-0"
+        aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+      <div
+        class="overflow-hidden rounded-[32px] border border-white/10 bg-black/50 shadow-[0_0_100px_rgba(255,90,31,0.12)] ring-1 ring-white/5">
+        <video id="modal-video" class="h-full max-h-[85vh] w-full object-contain" controls="" autoplay="" loop=""
+          playsinline=""></video>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openVideoModal(src) {
+      const modal = document.getElementById('video-modal');
+      const video = document.getElementById('modal-video');
+      const content = document.getElementById('video-modal-content');
+      video.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      void modal.offsetWidth;
+      modal.classList.remove('opacity-0');
+      content.classList.remove('scale-95');
+      content.classList.add('scale-100');
+      video.play();
+    }
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const video = document.getElementById('modal-video');
+      const content = document.getElementById('video-modal-content');
+      modal.classList.add('opacity-0');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        video.pause();
+        video.src = '';
+      }, 500);
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WordPress Development Company USA | Custom &amp; Headless WP</title>
+  <meta name="description" content="Looking for a specialized WordPress development company in the USA? We build customized, secure, and lightning-fast headless and native WordPress platforms.">
+  <meta name="keywords" content="WordPress development company USA, hire WordPress developer, custom WordPress sites, headless WordPress B2B">
+  
+  <!-- Service Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "WordPress Web Development Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Shayan Web Consulting",
+      "url": "https://shayn468.github.io"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "Contact for Quote"
+    },
+    "description": "High-performance WordPress web development services in the USA. Custom theme development, headless integrations, and enterprise B2B optimization."
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #060706;
+      --panel: #10110f;
+      --panel-2: #151713;
+      --cream: #f3f0e8;
+      --muted: rgba(243, 240, 232, 0.58);
+      --soft: rgba(243, 240, 232, 0.12);
+      --line: rgba(243, 240, 232, 0.10);
+      --orange: #ff5a1f;
+      --orange-soft: rgba(255, 90, 31, 0.22);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+      color-scheme: dark;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 70% 10%, rgba(255, 90, 31, 0.12), transparent 34rem),
+        radial-gradient(circle at 15% 45%, rgba(243, 240, 232, 0.05), transparent 26rem),
+        var(--bg);
+      color: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .18;
+      background-image: radial-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+
+    .grid-veil {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: .13;
+      background-image:
+        linear-gradient(rgba(243, 240, 232, .09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243, 240, 232, .09) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    .nav-link {
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: right;
+      background: currentColor;
+      transition: transform .45s var(--ease);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(243, 240, 232, .54);
+    }
+
+    .section-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--orange);
+      box-shadow: 0 0 20px rgba(255, 90, 31, .5);
+    }
+
+    .glass {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .035);
+      backdrop-filter: blur(18px);
+    }
+
+    .magnetic-button {
+      transition: transform .45s var(--ease), background .45s var(--ease), border-color .45s var(--ease);
+    }
+
+    .magnetic-button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 90, 31, .45);
+      background: rgba(255, 90, 31, .13);
+    }
+
+    .service-card {
+      transition: transform .55s var(--ease), border-color .55s var(--ease), background .55s var(--ease);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 90, 31, .34);
+      background: rgba(255, 255, 255, .06);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-veil" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 py-5 md:px-8 lg:px-12">
+    <a href="/index.html" class="text-lg font-semibold tracking-[-0.055em] text-[#f3f0e8] md:text-xl">
+      Shayan.
+    </a>
+
+    <nav class="hidden items-center gap-11 text-xs font-bold text-[#f3f0e8]/82 md:flex">
+      <a href="/index.html#work" class="nav-link">Work</a>
+      <a href="/index.html#services" class="nav-link">Services</a>
+      <a href="/index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer" class="nav-link">Let's Chat</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-32 px-5 md:px-8 lg:px-12 max-w-6xl mx-auto min-h-screen flex flex-col justify-center">
+    
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7">
+          <p class="section-label mb-6">WordPress Development Company USA</p>
+          <h1 class="text-5xl md:text-7xl font-black tracking-[-0.08em] leading-none text-[#f3f0e8] mb-8">
+            High-Performance WordPress Solutions Built to Scale
+          </h1>
+          <p class="text-[19px] leading-[1.6] text-[#f3f0e8]/72 mb-10 max-w-xl">
+            We are a leading custom WordPress development company in the USA. We transform standard setups into lightning-fast, highly secure native custom configurations and modern headless WordPress systems.
+          </p>
+          <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer"
+            class="magnetic-button inline-flex items-center gap-5 rounded-full border border-[#f3f0e8]/12 px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f3f0e8]">
+            Hire WordPress Developer on Fiverr
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff5a1f] text-[#060706]">
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </span>
+          </a>
+        </div>
+        <div class="md:col-span-5 relative">
+          <div class="glass rounded-[32px] p-8 relative overflow-hidden border-[#f3f0e8]/10 bg-white/[0.02] shadow-[0_40px_120px_rgba(0,0,0,0.6)]">
+            <span class="text-[8rem] font-black leading-none tracking-[-0.09em] text-[#ff5a1f]/20 block mb-4">WP</span>
+            <h3 class="text-3xl font-bold tracking-tight mb-4">Enterprise Security &amp; Speed</h3>
+            <p class="text-sm leading-[1.6] text-[#f3f0e8]/54">
+              We construct custom themes completely from scratch without bloated builders, ensuring minimal code payloads and maximum lighthouse performance scores.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 border-t border-[#f3f0e8]/10">
+      <h2 class="text-4xl font-semibold tracking-[-0.07em] mb-12">Our Specialized WordPress Stacks</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="service-card glass rounded-[28px] p-6">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">01</p>
+          <h3 class="text-2xl font-semibold tracking-[-0.05em] mb-3">Custom Theme Dev</h3>
+          <p class="text-sm leading-[1.65] text-[#f3f0e8]/54">
+            Bespoke WordPress themes structured cleanly to match precise designs, with modular layouts and optimized styles.
+          </p>
+        </div>
+        <div class="service-card glass rounded-[28px] p-6">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">02</p>
+          <h3 class="text-2xl font-semibold tracking-[-0.05em] mb-3">Headless WordPress</h3>
+          <p class="text-sm leading-[1.65] text-[#f3f0e8]/54">
+            De-couple your CMS and serve content statically using React/Next.js frontends, creating an un-hackable and lightning-fast site.
+          </p>
+        </div>
+        <div class="service-card glass rounded-[28px] p-6">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/44">03</p>
+          <h3 class="text-2xl font-semibold tracking-[-0.05em] mb-3">WooCommerce Systems</h3>
+          <p class="text-sm leading-[1.65] text-[#f3f0e8]/54">
+            Custom eCommerce storefronts engineered to convert visitors, integrated with secure payment gateways and inventory sync.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-[#f3f0e8]/10 mt-12 flex flex-wrap justify-between items-center gap-4">
+      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3f0e8]/34">
+        © 2026 Shayan Web Consulting.
+      </p>
+      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3f0e8]/34">
+        WordPress Development Company USA
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+  </script>
+</body>
+
+</html>
