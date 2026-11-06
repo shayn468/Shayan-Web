@@ -508,18 +508,153 @@
       opacity: 0;
     }
 
+        /* Responsive Page Rail: hide on tablets and mobile to prevent overlapping */
+    @media (max-width: 1279px) {
+      .page-rail {
+        display: none !important;
+      }
+    }
+
     @media (max-width: 767px) {
       .wordmark {
         letter-spacing: -0.065em;
       }
+    }
 
-      .page-rail {
-        display: none;
+    /* Universal Responsive Layout for Mobile and Tablet (< 1024px) */
+    @media (max-width: 1023px) {
+      .hero-section {
+        min-height: 100svh;
+        padding-top: 6rem;
+        padding-bottom: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 30;
+        width: 100%;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba(6, 7, 6, 0.82);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        padding: 1.75rem;
+        border-radius: 28px;
+        border: 1px solid rgba(243, 240, 232, 0.12);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9);
+      }
+
+      .hero-stack {
+        opacity: 0.28;
+        filter: blur(1.5px);
+        pointer-events: none;
+        transform: translate(-50%, -46%) scale(0.82) !important;
+      }
+
+      .brand-words {
+        gap: 1.25rem;
+      }
+
+      .brand-word {
+        font-size: clamp(2.75rem, 8vw, 4.5rem) !important;
+      }
+    }
+
+    /* Ultra-compact Phones (<= 480px: iPhone SE, 12 mini, Galaxy S) */
+    @media (max-width: 480px) {
+      .hero-copy {
+        padding: 1.25rem;
+        border-radius: 24px;
+      }
+
+      .hero-copy p {
+        font-size: 1rem !important;
+        line-height: 1.55 !important;
+      }
+
+      .hero-stack {
+        transform: translate(-50%, -46%) scale(0.68) !important;
+      }
+
+      .hero-trust {
+        width: 100% !important;
+        justify-content: space-between;
+      }
+
+      .brand-word {
+        font-size: 2.5rem !important;
+      }
+
+      .section-label {
+        font-size: 10px;
+        letter-spacing: 0.12em;
+      }
+    }
+
+    /* Mobile Landscape Orientation */
+    @media (max-width: 932px) and (orientation: landscape) {
+      .hero-section,
+      .services-section {
+        min-height: 130svh !important;
+        padding-top: 5rem;
+      }
+
+      .hero-copy {
+        max-width: 60%;
+        margin-left: 0;
+        padding: 1.25rem;
+      }
+
+      .hero-stack {
+        transform: translate(25%, -50%) scale(0.62) !important;
+        opacity: 0.45;
+      }
+
+      .brand-word {
+        font-size: 2.75rem !important;
+      }
+    }
+
+    /* Ultra-Wide Monitors & High-Resolution Displays (>= 1441px, 2K, 4K) */
+    @media (min-width: 1441px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #030403;
+      }
+
+      #home,
+      header,
+      .hero-section,
+      .services-section,
+      .brand-section,
+      .work-section,
+      .pricing-section,
+      .partners-section,
+      .archive-scroll-section,
+      .process-section,
+      .faq-section,
+      .numbers-intro,
+      .footer-section {
+        width: 100%;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      header {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1600px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       *,
       *::before,
       *::after {
@@ -540,59 +675,6 @@
         transform: none !important;
       }
     }
-
-    @media (min-width: 1441px) {
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #030403;
-      }
-
-      #home,
-      header,
-      .services-section,
-      .brand-section,
-      .work-section,
-      .pricing-section,
-      .footer-section {
-        width: 100%;
-        max-width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      header {
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 1600px;
-      }
-    }
-
-    @media (max-width: 480px) and (orientation: portrait) {
-      .hero-stack {
-        transform: translate(-50%, -40%) scale(0.85);
-      }
-
-      .hero-copy {
-        transform: translateY(-5vh);
-      }
-
-      .brand-words {
-        gap: 1rem;
-      }
-
-      .brand-word {
-        font-size: 3rem !important;
-      }
-    }
-
-    @media (max-width: 820px) and (orientation: landscape) {
-
-      .hero-section,
-      .services-section {
-        min-height: 120svh !important;
-      }
 
       .hero-stack {
         transform: translate(10%, -50%) scale(0.65) !important;
@@ -631,14 +713,14 @@
   </div>
 
 
-  <header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 py-5 md:px-8 lg:px-12">
+  <header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 py-5 md:px-8 lg:px-12 backdrop-blur-md bg-[#060706]/40 transition-all duration-300">
     <a href="#home" class="text-lg font-semibold tracking-[-0.055em] text-[#f3f0e8] md:text-xl">
       Shayan.
     </a>
 
-    <nav class="hidden items-center gap-11 text-xs font-bold text-[#f3f0e8]/82 md:flex">
+    <nav class="hidden items-center gap-7 xl:gap-11 text-xs font-bold text-[#f3f0e8]/82 lg:flex">
       <a href="#testimonials" class="nav-link">
-        <span class="mr-5 inline-block h-1.5 w-1.5 rounded-full bg-[#ff5a1f] align-middle"></span>
+        <span class="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[#ff5a1f] align-middle"></span>
         Proof
       </a>
       <a href="#work" class="nav-link">Work</a>
@@ -648,10 +730,43 @@
       <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer" class="nav-link">Let's Chat</a>
     </nav>
 
-    <button class="glass flex h-10 w-10 items-center justify-center rounded-full md:hidden" aria-label="Open menu">
-      <i data-lucide="menu" class="h-4 w-4"></i>
+    <!-- Mobile / Tablet Hamburger Button -->
+    <button class="glass flex h-11 w-11 items-center justify-center rounded-full lg:hidden text-[#f3f0e8] hover:text-[#ff5a1f] transition-colors"
+      onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+      <i data-lucide="menu" class="h-5 w-5"></i>
     </button>
   </header>
+
+  <!-- Mobile & Tablet Fullscreen Navigation Drawer -->
+  <div id="mobile-menu"
+    class="fixed inset-0 z-[100] flex flex-col justify-between bg-[#060706]/98 p-6 md:p-10 backdrop-blur-3xl transition-all duration-300 opacity-0 pointer-events-none lg:hidden">
+    <div class="flex items-center justify-between">
+      <a href="#home" onclick="closeMobileMenu()" class="text-xl font-bold tracking-[-0.055em] text-[#f3f0e8]">Shayan.</a>
+      <button onclick="closeMobileMenu()" class="glass flex h-11 w-11 items-center justify-center rounded-full text-[#f3f0e8] hover:text-[#ff5a1f]" aria-label="Close menu">
+        <i data-lucide="x" class="h-5 w-5"></i>
+      </button>
+    </div>
+    
+    <nav class="flex flex-col gap-6 py-8">
+      <a href="#testimonials" onclick="closeMobileMenu()" class="text-2xl sm:text-3xl font-black tracking-[-0.06em] text-[#f3f0e8] hover:text-[#ff5a1f] flex items-center justify-between">
+        <span>Proof & Reviews</span>
+        <span class="text-xs uppercase font-bold tracking-widest text-[#ff5a1f]">104+ 5.0 ★</span>
+      </a>
+      <a href="#work" onclick="closeMobileMenu()" class="text-2xl sm:text-3xl font-black tracking-[-0.06em] text-[#f3f0e8] hover:text-[#ff5a1f]">Selected Work</a>
+      <a href="#experience" onclick="closeMobileMenu()" class="text-2xl sm:text-3xl font-black tracking-[-0.06em] text-[#f3f0e8] hover:text-[#ff5a1f]">Experience</a>
+      <a href="#services" onclick="closeMobileMenu()" class="text-2xl sm:text-3xl font-black tracking-[-0.06em] text-[#f3f0e8] hover:text-[#ff5a1f]">Services</a>
+      <a href="#faq" onclick="closeMobileMenu()" class="text-2xl sm:text-3xl font-black tracking-[-0.06em] text-[#f3f0e8] hover:text-[#ff5a1f]">Direct FAQ</a>
+    </nav>
+
+    <div class="pt-6 border-t border-[#f3f0e8]/10 flex flex-col gap-3">
+      <a href="https://fiverr.com/shayn_dev" target="_blank" rel="noopener noreferrer"
+        class="magnetic-button flex items-center justify-center gap-3 rounded-full bg-[#ff5a1f] px-6 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#060706]">
+        <span>Start Project on Fiverr</span>
+        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+      </a>
+      <p class="text-center text-[11px] uppercase tracking-widest text-[#f3f0e8]/45">100% Escrow Buyer Protection • Top Rated</p>
+    </div>
+  </div>
   <main id="home" class="relative z-10 overflow-hidden">
 
 <section class="hero-section relative flex min-h-[100svh] items-center overflow-hidden px-5 py-24 md:px-8 lg:px-12">
@@ -2200,6 +2315,31 @@
     </div>
   </div>
   <script>
+        function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        const isHidden = menu.classList.contains('pointer-events-none');
+        if (isHidden) {
+          menu.classList.remove('pointer-events-none');
+          menu.classList.remove('opacity-0');
+          menu.classList.add('opacity-100');
+          document.body.style.overflow = 'hidden';
+        } else {
+          closeMobileMenu();
+        }
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.add('opacity-0');
+        menu.classList.add('pointer-events-none');
+        menu.classList.remove('opacity-100');
+        document.body.style.overflow = '';
+      }
+    }
+
     function openVideoModal(src) {
       const modal = document.getElementById('video-modal');
       const video = document.getElementById('modal-video');
