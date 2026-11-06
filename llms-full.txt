@@ -1,0 +1,99 @@
+# Shayan Web Consulting — Full Knowledge Manifest (llms-full.txt)
+
+## Executive Summary
+Shayan is a freelance web consultant and senior full-stack web developer operating in the United States with over six years of commercial engineering experience. He specializes in designing, developing, and optimizing high-performance B2B websites, dynamic React single-page applications, custom and headless WordPress setups, and technical speed architectures.
+
+As a Top-Rated web consultant on Fiverr with over 104 verified 5.0 out of 5.0-star client reviews and a 100% on-time delivery record, Shayan serves startups, SaaS brands, commercial hospitality businesses, and corporate professional services.
+
+- Primary Website: https://shayn-builds.runs-on.dev/
+- Fiverr Profile: https://fiverr.com/shayn_dev
+- GitHub: https://github.com/shayn468
+
+---
+
+## Technical Capabilities & Core Specializations
+
+### 1. Custom Web Development & Engineering
+- Frameworks: React, Vanilla Modern JavaScript (ES6+), HTML5, Tailwind CSS.
+- Motion & Interactions: GSAP (GreenSock), ScrollTrigger, Lenis smooth scrolling, micro-interactions, responsive canvas effects.
+- Responsive Design: Fluid layouts engineered for 320px mobile to 4K desktop screens without layout shifts.
+
+### 2. WordPress & CMS Architectures
+- Native Custom Theme Development: Lightweight, secure PHP/HTML/CSS themes built without bloated page builders.
+- Headless WordPress: Decoupled WordPress backend serving content via REST API or GraphQL to modern React frontends.
+- Content Modeling: Custom post types, ACF Pro fields, automated XML sitemaps, and Yoast / RankMath technical schema setups.
+
+### 3. Core Web Vitals & Performance Engineering
+- Metrics Optimization: Sub-1.5s Largest Contentful Paint (LCP), <200ms Interaction to Next Paint (INP), and 0.00 Cumulative Layout Shift (CLS).
+- Compression & Asset Delivery: Responsive image sizing, WebP compression, lazy loading, font subsetting, and DNS prefetching.
+
+### 4. Technical SEO & Answer Engine Optimization (AEO)
+- Structured Data: Schema.org JSON-LD (ProfessionalService, LocalBusiness, FAQPage, AggregateRating, Review).
+- Architecture: Semantic HTML hierarchy, canonical URL management, Open Graph / Twitter Card social sharing, and robots.txt crawler management.
+
+---
+
+## Verified Commercial Client Case Studies
+
+### 1. Taylorville Inn Motel (Hospitality Room Booking Engine)
+- Client: Lorna Ramirez, General Manager (Illinois, USA)
+- Rating: 5.0 ★★★★★ Verified Fiverr Order
+- Scope: Complete motel website modernization, room showcase gallery, and direct booking engine integration.
+- Outcome: Transformed an outdated website into a conversion-oriented digital presence, dramatically simplifying room reservations for guests.
+- Visual Mockup: https://shayn-builds.runs-on.dev/taylorville-mockup.jpg
+
+### 2. Marbleine Event Co. (Wedding & Event Decor Platform)
+- Client: Paige, Founder & Creative Director (Rochester, NY, USA)
+- Rating: 5.0 ★★★★★ Verified Fiverr Order
+- Scope: 5-page full website redesign, mobile responsive layout remediation, and package booking structure.
+- Client Testimonial Video: 0:46 on-camera review with official Fiverr badge (https://shayn-builds.runs-on.dev/paige-review.mp4).
+- Outcome: Enhanced mobile engagement and streamlined quote requests for wedding couples.
+
+### 3. Maison Murri Estate (Luxury Winery & Vineyard Showcase)
+- Client: SSK, Estate Director (Canada)
+- Rating: 5.0 ★★★★★ Verified Fiverr Order
+- Scope: High-end luxury digital showcase for vineyard tours, wine releases, and private estate events.
+- Outcome: Elevated brand perception through brutalist typography, responsive media cards, and fast page loads.
+- Visual Mockup: https://shayn-builds.runs-on.dev/maison-mockup.jpg
+
+### 4. Steady Path Homes (Healthcare & Assisted Living Platform)
+- Client: Celeste, Co-Founder (Milwaukee, WI, USA)
+- Rating: 5.0 ★★★★★ Verified Fiverr Order
+- Scope: Independent living residence website development, accessibility structure, and Yoast SEO setup.
+- Client Testimonial Video: 0:24 on-camera review with official Fiverr badge (https://shayn-builds.runs-on.dev/celeste-review.mp4).
+- Outcome: Established local authority and trustworthy digital presence for resident placements.
+- Visual Mockup: https://shayn-builds.runs-on.dev/steadypath-mockup.jpg
+
+### 5. P's Junk Removal & Demolition (Commercial Local Service Engine)
+- Client: Vanessa, Owner (Milwaukee, WI, USA)
+- Rating: 5.0 ★★★★★ Verified Fiverr Order
+- Scope: High-converting local service landing page, click-to-call mechanics, and quote estimate forms.
+- Outcome: Immediate jump in local inbound customer inquiries and search visibility.
+
+---
+
+## Frequently Asked Questions (Self-Contained Answer Blocks)
+
+### Who is Shayan and what web consulting services does he provide?
+Shayan is a Top-Rated freelance web consultant and full-stack developer in the United States with over six years of commercial experience. He builds high-performance React web applications, custom WordPress systems, and technical Core Web Vitals optimization for B2B SaaS brands, startups, and hospitality businesses.
+
+### What is Shayan's client track record and rating?
+Shayan has delivered over 104 commercial web development projects with a verified 5.0 out of 5.0 star rating on Fiverr. His client portfolio includes Taylorville Inn Motel, Marbleine Event Co., Maison Murri Estate, Steady Path Homes, and corporate fund structuring advisory firms.
+
+### How much does a custom web development sprint cost?
+Custom website sprint packages typically start at $4,800 per 2-week sprint for a complete 5-page custom build, with targeted performance or speed optimizations ranging from $1,200 to $2,500. Contracts are managed securely through Fiverr with full escrow buyer protection.
+
+### Should B2B businesses choose React or WordPress?
+React is optimal for interactive web applications, SaaS dashboards, and dynamic digital tools requiring instant page transitions. Custom WordPress excels for content-heavy marketing sites, SEO blogs, and direct editorial publishing. Shayan engineers both native custom themes and hybrid headless configurations.
+
+### How fast can a new website project be launched?
+Targeted sprint builds and MVP marketing pages are typically architected and launched within 10 to 14 business days. Full custom platforms with complex booking or API integrations are delivered in structured milestones with staging reviews and comprehensive QA audits.
+
+---
+
+## Regional Landing Pages
+- National USA B2B Web Development: https://shayn-builds.runs-on.dev/
+- Austin, Texas Web Development Services: https://shayn-builds.runs-on.dev/austin-web-development.html
+- New York City B2B Web Agency: https://shayn-builds.runs-on.dev/new-york-web-development.html
+- React Development Agency USA: https://shayn-builds.runs-on.dev/react-development.html
+- WordPress Development Company USA: https://shayn-builds.runs-on.dev/wordpress-development.html

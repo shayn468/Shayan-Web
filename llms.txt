@@ -1,0 +1,34 @@
+# Shayan — Freelance Web Consultant & B2B Web Developer
+
+> Freelance Web Consultant and Full-Stack Web Developer with 6+ years of experience helping founders, brands, and businesses build high-performance digital experiences designed to drive growth, increase conversions, and create lasting impact. Top-Rated on Fiverr with 104+ verified 5.0-star client reviews.
+
+## Core Services
+- [Web Development](https://shayn-builds.runs-on.dev/#services): Modern, scalable websites crafted for speed and exceptional user experiences. Specialized in React and custom WordPress.
+- [React Development](https://shayn-builds.runs-on.dev/react-development.html): High-performance Single Page Applications (SPAs), component-driven architectures, SaaS frontends, and dynamic web interfaces.
+- [WordPress Development](https://shayn-builds.runs-on.dev/wordpress-development.html): Secure, fast, native custom themes and modern headless WordPress systems.
+- [Core Web Vitals & Speed Optimization](https://shayn-builds.runs-on.dev/#services): Deep performance audits, asset compression, and millisecond loading architectures.
+- [AI-First Workflows](https://shayn-builds.runs-on.dev/#services): Smarter automation and workflows designed to scale business operations.
+
+## Verified Track Record & Social Proof
+- Rating: 5.0 / 5.0 Stars (100% 5-Star Rating)
+- Reviews: 104+ Verified Commercial Reviews on Fiverr
+- Delivery: 100% On-Time Delivery Guarantee
+- Level: Top Rated Web Consultant / Senior Developer
+- Marketplace Profile: https://fiverr.com/shayn_dev
+- Source Code Repository: https://github.com/shayn468
+
+## Selected Delivered Client Projects
+- [Taylorville Inn Motel](https://shayn-builds.runs-on.dev/#work): Full commercial motel website redesign and direct room booking architecture. Client: Lorna Ramirez (Illinois, USA).
+- [Marbleine Event Co.](https://shayn-builds.runs-on.dev/#testimonials): Luxury wedding & event decor platform redesign with mobile optimization and structured booking packages. Client: Paige (Rochester, NY). Video review available.
+- [Maison Murri Estate](https://shayn-builds.runs-on.dev/#work): High-end winery, vineyard tours, and private events showcase platform. Client: SSK (Canada).
+- [Steady Path Homes](https://shayn-builds.runs-on.dev/#testimonials): Independent living residential care website and full Yoast SEO architecture. Client: Celeste (Milwaukee, WI). Video review available.
+- [P's Junk Removal & Demolition](https://shayn-builds.runs-on.dev/): Commercial demolition and hauling digital infrastructure for local lead generation. Client: Vanessa (Milwaukee, WI).
+
+## Pricing & Engagements
+- [Structured Pricing & Sprint Details](https://shayn-builds.runs-on.dev/pricing.md): Transparent sprint packaging starting at $4,800/sprint or custom project milestones.
+- Contract Platform: Direct hiring available on Fiverr with full buyer protection (https://fiverr.com/shayn_dev).
+
+## Location & Regional Presence
+- United States (National B2B services)
+- [Austin, Texas Web Development Services](https://shayn-builds.runs-on.dev/austin-web-development.html)
+- [New York City Web Development Services](https://shayn-builds.runs-on.dev/new-york-web-development.html)
