@@ -1189,7 +1189,13 @@
               <span>05. UMG Underground</span>
             </button>
             <button type="button" onclick="jumpToProject(5)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="5">
-              <span>06. Live Demo</span>
+              <span>06. Pickleball Club</span>
+            </button>
+            <button type="button" onclick="jumpToProject(6)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="6">
+              <span>07. Quantum REI</span>
+            </button>
+            <button type="button" onclick="jumpToProject(7)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="7">
+              <span>08. Live Demo</span>
             </button>
           </div>
         </div>
@@ -1456,11 +1462,119 @@
         </figure>
 
         <!-- =======================================================================
-             PROJECT CARD 6: Interactive Video Walkthrough (Live Build Demo)
+             PROJECT CARD 6: NewGen Pickleball Club (Court Booking / React Web App)
              TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
              ======================================================================= -->
         <figure
           id="work-card-5"
+          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          data-project="pickleball">
+          
+          <!-- Browser Frame Top Bar -->
+          <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
+            <div class="flex items-center gap-1.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f56]"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-[#27c93f]"></span>
+            </div>
+            <div class="flex items-center gap-1.5 rounded-md bg-[#080a08] px-3 py-1 text-[10px] font-mono text-[#f3f0e8]/65 border border-white/5">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <span>newgenpickleball.com</span>
+            </div>
+            <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">React App</span>
+          </div>
+
+          <!-- Browser Viewport with Hover-to-Scroll Page Roll -->
+          <div class="browser-frame-viewport relative flex-1">
+            <img
+              src="mockup-pickleball.webp"
+              alt="NewGen Pickleball Club custom booking platform"
+              loading="lazy"
+              class="browser-scroll-img">
+            
+            <!-- Bottom Detail Overlay -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#060706] via-[#060706]/85 to-transparent p-5 sm:p-6 pt-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-30">
+              <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]">Sports &amp; Athletics</span>
+              <h3 class="text-xl sm:text-2xl font-black text-[#f3f0e8] mt-0.5">NewGen Pickleball Club</h3>
+              <p class="text-xs text-[#f3f0e8]/70 mt-0.5">CourtReserve Integration &amp; Real-Time Booking</p>
+            </div>
+
+            <!-- Hover Preview Pill -->
+            <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f3f0e8]">
+                <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-ping"></span>
+                Court Booking Platform
+              </span>
+            </div>
+          </div>
+
+          <!-- Bottom Meta Bar -->
+          <div class="flex items-center justify-between border-t border-white/10 bg-[#121612] px-5 py-3 shrink-0">
+            <span class="text-[11px] font-bold text-[#ff5a1f]">React / Tailwind Architecture</span>
+            <span class="text-[10px] font-mono text-[#f3f0e8]/50">High-Conversion UX</span>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 7: Quantum REI Funding (Commercial Lending / Real Estate)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          id="work-card-6"
+          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          data-project="quantum">
+          
+          <!-- Browser Frame Top Bar -->
+          <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
+            <div class="flex items-center gap-1.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f56]"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-[#27c93f]"></span>
+            </div>
+            <div class="flex items-center gap-1.5 rounded-md bg-[#080a08] px-3 py-1 text-[10px] font-mono text-[#f3f0e8]/65 border border-white/5">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <span>quantumreifunding.com</span>
+            </div>
+            <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">Commercial REI</span>
+          </div>
+
+          <!-- Browser Viewport with Hover-to-Scroll Page Roll -->
+          <div class="browser-frame-viewport relative flex-1">
+            <img
+              src="mockup-quantum.webp"
+              alt="Quantum REI Funding Rhonda Hines commercial lending platform"
+              loading="lazy"
+              class="browser-scroll-img">
+            
+            <!-- Bottom Detail Overlay -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#060706] via-[#060706]/85 to-transparent p-5 sm:p-6 pt-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-30">
+              <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]">Commercial Real Estate</span>
+              <h3 class="text-xl sm:text-2xl font-black text-[#f3f0e8] mt-0.5">Quantum REI Funding</h3>
+              <p class="text-xs text-[#f3f0e8]/70 mt-0.5">Founded by Rhonda Hines • Private Lending Portal</p>
+            </div>
+
+            <!-- Hover Preview Pill -->
+            <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f3f0e8]">
+                <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-ping"></span>
+                Commercial Lending
+              </span>
+            </div>
+          </div>
+
+          <!-- Bottom Meta Bar -->
+          <div class="flex items-center justify-between border-t border-white/10 bg-[#121612] px-5 py-3 shrink-0">
+            <span class="text-[11px] font-bold text-[#ff5a1f]">B2B Investor Platform</span>
+            <span class="text-[10px] font-mono text-[#f3f0e8]/50">Enterprise Lending</span>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 8: Interactive Video Walkthrough (Live Build Demo)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          id="work-card-7"
           class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           onclick="openVideoModal('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801')">
           
@@ -1530,16 +1644,85 @@
         </div>
 
         <div class="relative md:col-span-7 md:col-start-4">
-          <div class="relative flex min-h-[520px] items-center justify-center">
+          <div class="relative flex flex-col items-center justify-center gap-6 py-6 md:min-h-[580px] lg:min-h-[640px]">
+            <!-- Architectural Background Masked Number "06" -->
             <span
-              class="masked-number text-[13rem] font-black leading-none tracking-[-0.09em] md:text-[24rem] lg:text-[29rem]"
+              class="masked-number pointer-events-none select-none text-[11rem] font-black leading-none tracking-[-0.09em] opacity-30 md:opacity-40 md:text-[24rem] lg:text-[29rem] absolute z-0"
               style="--number-image: url('Cafe.png'); background-position: 20% 80%;">
               06
             </span>
-            <img src="Pickleball.png" alt="Custom Pickleball web app development using React"
-              class="project-card absolute left-0 top-14 hidden h-44 w-72 rotate-[-14deg] rounded-[18px] border border-[#f3f0e8]/10 object-cover md:block">
-            <img src="quantum.png" alt="Quantum brand custom website development services"
-              class="project-card absolute right-4 top-6 hidden h-44 w-72 rotate-[10deg] rounded-[18px] border border-[#f3f0e8]/10 object-cover md:block">
+
+            <!-- Project Showcase Card 1: NewGen Pickleball Club -->
+            <figure class="project-card group relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[390px] lg:max-w-[420px] rounded-[22px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-105 hover:rotate-0 hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] md:absolute md:left-[-15px] lg:left-[-35px] md:top-6 md:rotate-[-3.5deg] z-10 cursor-pointer flex flex-col">
+              <!-- macOS Window Header -->
+              <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-2.5 select-none shrink-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="h-2 w-2 rounded-full bg-[#ff5f56]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#ffbd2e]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#27c93f]"></span>
+                </div>
+                <div class="flex items-center gap-1.5 rounded-md bg-[#080a08] px-2.5 py-0.5 text-[10px] font-mono text-[#f3f0e8]/75 border border-white/5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span>newgenpickleball.com</span>
+                </div>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">React App</span>
+              </div>
+
+              <!-- Uncropped Preview Image (100% visible, no overlay text) -->
+              <div class="relative overflow-hidden bg-[#060706]">
+                <img
+                  src="mockup-pickleball.webp"
+                  alt="NewGen Pickleball Club custom booking platform"
+                  loading="lazy"
+                  class="w-full h-auto block transform transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+              </div>
+
+              <!-- Dedicated Card Footer (High contrast, crystal clear text) -->
+              <div class="border-t border-white/10 bg-[#111411] px-5 py-3.5 shrink-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-black uppercase tracking-[0.16em] text-[#ff5a1f]">Sports &amp; Athletics</span>
+                  <span class="text-[10px] font-mono text-[#f3f0e8]/50">React / Tailwind</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-[#f3f0e8] mt-0.5">NewGen Pickleball Club</h3>
+                <p class="text-xs text-[#f3f0e8]/65 mt-0.5">CourtReserve Integration &amp; Real-Time Booking Engine</p>
+              </div>
+            </figure>
+
+            <!-- Project Showcase Card 2: Quantum REI Funding -->
+            <figure class="project-card group relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[390px] lg:max-w-[420px] rounded-[22px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-105 hover:rotate-0 hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] md:absolute md:right-[-15px] lg:right-[-35px] md:bottom-6 md:rotate-[3.5deg] z-20 cursor-pointer flex flex-col">
+              <!-- macOS Window Header -->
+              <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-2.5 select-none shrink-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="h-2 w-2 rounded-full bg-[#ff5f56]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#ffbd2e]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#27c93f]"></span>
+                </div>
+                <div class="flex items-center gap-1.5 rounded-md bg-[#080a08] px-2.5 py-0.5 text-[10px] font-mono text-[#f3f0e8]/75 border border-white/5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span>quantumreifunding.com</span>
+                </div>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">Real Estate</span>
+              </div>
+
+              <!-- Uncropped Preview Image (100% visible, no overlay text) -->
+              <div class="relative overflow-hidden bg-[#060706]">
+                <img
+                  src="mockup-quantum.webp"
+                  alt="Quantum REI Funding Rhonda Hines commercial lending platform"
+                  loading="lazy"
+                  class="w-full h-auto block transform transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+              </div>
+
+              <!-- Dedicated Card Footer (High contrast, crystal clear text) -->
+              <div class="border-t border-white/10 bg-[#111411] px-5 py-3.5 shrink-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-black uppercase tracking-[0.16em] text-[#ff5a1f]">Commercial Real Estate</span>
+                  <span class="text-[10px] font-mono text-[#f3f0e8]/50">Private Lending</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-[#f3f0e8] mt-0.5">Quantum REI Funding</h3>
+                <p class="text-xs text-[#f3f0e8]/65 mt-0.5">Founded by Rhonda Hines • B2B Capital &amp; Investment Portal</p>
+              </div>
+            </figure>
           </div>
         </div>
 
@@ -2311,7 +2494,7 @@
         {
           y: 0,
           opacity: 1,
-          rotate: (i) => [-1.5, 1.2, -1.2, 1.5, -1, 1.2][i % 6],
+          rotate: (i) => [-1.5, 1.2, -1.2, 1.5, -1, 1.2, -1.2, 1.2][i % 8],
           stagger: 0.05,
           duration: 0.5,
           ease: "power2.out",
@@ -2354,9 +2537,13 @@
 
       work
         .from(".work-copy", { x: -80, opacity: 0, duration: .4 }, 0)
-        .fromTo(".masked-number", { scale: .82, y: 80, backgroundPosition: "50% 28%" }, { scale: 1.1, y: -50, backgroundPosition: "50% 74%", duration: 1 }, 0)
-        .from(".project-card", { y: 80, opacity: 0, rotate: 0, stagger: .1, duration: .4 }, .15)
-        .to(".project-card", { y: -40, x: (i) => (i ? 42 : -34), duration: .8 }, .45);
+        .fromTo(".masked-number", { scale: .82, y: 80, backgroundPosition: "50% 28%" }, { scale: 1.05, y: -40, backgroundPosition: "50% 74%", duration: 1 }, 0)
+        .fromTo(".project-card",
+          { y: 50, opacity: 0.3, scale: 0.95 },
+          { y: 0, opacity: 1, scale: 1, stagger: 0.08, duration: 0.35 },
+          0.02
+        )
+        .to(".project-card", { y: -25, duration: 0.65 }, 0.35);
 
       // 05. Experience editorial (partners-section)
       gsap.timeline({
