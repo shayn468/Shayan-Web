@@ -1131,12 +1131,12 @@
 
 
     <!-- ==================== 03. COMMERCIAL WORK & DELIVERABLES ==================== -->
-    <section class="archive-scroll-section relative overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+    <section id="work" class="archive-scroll-section relative overflow-hidden px-5 py-24 md:px-8 lg:px-12">
       <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
         <div class="md:col-span-3">
           <p class="section-label">Selected Work</p>
           <p class="mt-8 max-w-64 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
-            Recent client websites and custom platforms. Clean frontend code, fast loading speeds, and straightforward CMS handoffs.
+            Real commercial client builds across B2B, e-commerce, and hospitality. Clean frontend code, zero bloat, and proven conversion outcomes.
           </p>
         </div>
 
@@ -1145,98 +1145,375 @@
             class="archive-title text-[54px] font-black leading-[0.9] tracking-[-0.08em] text-[#f3f0e8] md:text-[86px] lg:text-[112px]">
             Built clean, fast, and easy to maintain.
           </h2>
+          
+          <!-- Category Filter Bar (Dynamically syncs with visible cards) -->
+          <div class="archive-filter-bar mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <button type="button" onclick="setWorkFilter('all')" class="filter-btn active-filter inline-flex items-center gap-2 rounded-full border border-[#ff5a1f]/50 bg-[#ff5a1f]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#ff5a1f] transition-all duration-300 hover:border-[#ff5a1f] cursor-pointer" data-filter="all">
+              <span>All Work</span>
+              <span class="filter-count opacity-75" data-count="all">(08)</span>
+            </button>
+            <button type="button" onclick="setWorkFilter('b2b')" class="filter-btn inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-filter="b2b">
+              <span>B2B &amp; Tech</span>
+              <span class="filter-count opacity-75" data-count="b2b">(02)</span>
+            </button>
+            <button type="button" onclick="setWorkFilter('ecommerce')" class="filter-btn inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-filter="ecommerce">
+              <span>E-Commerce</span>
+              <span class="filter-count opacity-75" data-count="ecommerce">(03)</span>
+            </button>
+            <button type="button" onclick="setWorkFilter('hospitality')" class="filter-btn inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-filter="hospitality">
+              <span>Hospitality &amp; Booking</span>
+              <span class="filter-count opacity-75" data-count="hospitality">(03)</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="archive-gallery mt-20 flex gap-5 will-change-transform">
-        <figure
-          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
-          <img
-            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2e233402-8ffe-41e4-b55c-d3c2384436ff_1600w.png"
-            alt="Barazi CPA custom WordPress website development company USA mockup"
-            class="h-full w-full object-cover opacity-75">
-        </figure>
+      <!-- =======================================================================
+           COMMERCIAL CLIENT WORK GALLERY
+           HOW TO REMOVE OR REVERT ANY CARD:
+           Each card below is an independent, modular <figure> block.
+           - To remove a project: Delete or comment out its entire <figure>...</figure> block.
+           - To revert: Uncomment the <figure>...</figure> block.
+           The filter counts, gallery width, and horizontal GSAP scroll adapt automatically!
+           ======================================================================= -->
+      <div class="archive-gallery mt-16 sm:mt-20 flex gap-6 will-change-transform pb-4">
 
+        <!-- =======================================================================
+             PROJECT CARD 1: DekoPanels (Architectural Surfaces / Shopify)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
         <figure
-          class="archive-card mt-20 h-[360px] w-[300px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[460px] md:w-[360px] group relative cursor-pointer"
-          onclick="openVideoModal('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801')">
-          <video
-            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801"
-            poster="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f40546b7-20d7-4568-851a-df21a32472f6_1600w.png"
-            aria-label="Archive video"
-            class="h-full w-full object-contain opacity-80 cursor-pointer scale-105 transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 group-hover:opacity-100"
-            style="will-change: transform, opacity" muted="" playsinline="" loop="" onmouseenter="this.play()"
-            onmouseleave="this.pause();"></video>
-        </figure>
-
-        <figure
-          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="dekopanels"
+          data-category="ecommerce"
+          onclick="openProjectModal('dekopanels')">
           <img
-            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b31a24c8-c70e-4032-81eb-81b3d9c35bbb_800w.png"
-            alt="Food truck custom React development agency USA application design"
-            class="opacity-75 w-full h-full object-contain">
-        </figure>
+            src="mockup-dekopanels.webp"
+            alt="DekoPanels luxury architectural wall panels custom Shopify website development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <!-- Top Floating Badges -->
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              E-Commerce
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
 
-        <figure
-          class="archive-card mt-28 h-[360px] w-[300px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[460px] md:w-[360px]">
-          <img
-            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/88578977-576e-4c52-9624-aa1fa34eae22_800w.png"
-            alt="B2B web development services USA portfolio showcase layout"
-            class="opacity-75 w-full h-full object-contain">
-        </figure>
-
-        <figure
-          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px]">
-          <img
-            src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/3258ed11d02fa2a4de13abe4c782158a-1694103293/screencapture-nesti-2023-09-07.png"
-            alt="Responsive web developer USA client work showcase mockup"
-            class="h-full w-full object-cover opacity-75">
-        </figure>
-
-        <figure
-          class="archive-card mt-24 h-[380px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[480px] md:w-[380px] group relative">
-          <img
-            src="taylorville-mockup.jpg"
-            alt="Taylorville Inn Motel custom website design and booking development"
-            class="h-full w-full object-cover object-top opacity-80 transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
-            <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#ff5a1f]">Commercial Hospitality</span>
-            <h4 class="text-xl font-bold tracking-tight text-[#f3f0e8] mt-1">Taylorville Inn Motel</h4>
-            <p class="text-xs text-[#f3f0e8]/65 mt-0.5">Motel Website & Direct Room Booking Engine</p>
+          <!-- Bottom Glass Detail Gradient -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Architectural Surfaces</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">DekoPanels</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Custom Shopify Theme &amp; Trade Spec Engine</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                +34% Sample Requests
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                &lt; 0.8s LCP
+              </span>
+            </div>
           </div>
         </figure>
 
+        <!-- =======================================================================
+             PROJECT CARD 2: Greenhill Tech (Enterprise IT & Cybersecurity)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
         <figure
-          class="archive-card h-[420px] w-[320px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[560px] md:w-[420px] group relative">
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="greenhill"
+          data-category="b2b"
+          onclick="openProjectModal('greenhill')">
           <img
-            src="maison-mockup.jpg"
-            alt="Maison Murri Estate luxury winery and vineyard web platform"
-            class="h-full w-full object-cover object-top opacity-80 transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
-            <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#ff5a1f]">Luxury Estate & Winery</span>
-            <h4 class="text-xl font-bold tracking-tight text-[#f3f0e8] mt-1">Maison Murri Estate</h4>
-            <p class="text-xs text-[#f3f0e8]/65 mt-0.5">Tasting Experiences & Private Events Platform</p>
+            src="mockup-greenhill.webp"
+            alt="Greenhill Technology Solutions enterprise IT and cybersecurity website development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              B2B &amp; Tech
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Enterprise Cybersecurity</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Greenhill Tech</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Managed IT &amp; Cloud Infrastructure Platform</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                99.8% Form Completion
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                100/100 CWV
+              </span>
+            </div>
           </div>
         </figure>
 
+        <!-- =======================================================================
+             PROJECT CARD 3: Restaureal (Haute Cuisine & Table Reservations)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
         <figure
-          class="archive-card mt-20 h-[360px] w-[300px] shrink-0 overflow-hidden rounded-[34px] border border-[#f3f0e8]/10 bg-[#101310] md:h-[460px] md:w-[360px] group relative">
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="restaureal"
+          data-category="hospitality"
+          onclick="openProjectModal('restaureal')">
           <img
-            src="steadypath-mockup.jpg"
-            alt="Steady Path Homes residential living facility website"
-            class="h-full w-full object-cover object-top opacity-80 transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
-            <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#ff5a1f]">Healthcare & Residential</span>
-            <h4 class="text-xl font-bold tracking-tight text-[#f3f0e8] mt-1">Steady Path Homes</h4>
-            <p class="text-xs text-[#f3f0e8]/65 mt-0.5">Assisted Living Digital Infrastructure & SEO</p>
+            src="mockup-restaureal.webp"
+            alt="Restaureal fine dining restaurant direct table reservation website development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              Hospitality
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Fine Dining &amp; Culinary</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Restaureal</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Direct Table Booking &amp; Tasting Menus</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                0% Third-Party Fees
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                92% Direct
+              </span>
+            </div>
           </div>
         </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 4: Taylorville Inn Motel (Boutique Hospitality & Booking)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="taylorville"
+          data-category="hospitality"
+          onclick="openProjectModal('taylorville')">
+          <img
+            src="mockup-taylorville.webp"
+            alt="Taylorville Inn Motel custom website design and direct booking engine development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              Hospitality
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Boutique Hospitality</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Taylorville Inn Motel</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Direct Room Booking Engine &amp; Guest Portal</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                +42% Direct Bookings
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                Zero OTA Fees
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 5: Maison Murri Estate (Luxury Winery & Allocations Club)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="maison"
+          data-category="hospitality"
+          onclick="openProjectModal('maison')">
+          <img
+            src="mockup-maison.webp"
+            alt="Maison Murri Estate luxury winery tasting and allocation platform development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              Hospitality
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Luxury Estate &amp; Winery</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Maison Murri Estate</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Private Allocations Club &amp; Tasting Experiences</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                Private Allocations
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                VIP Portal
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 6: E&A Brews (Specialty Coffee DTC & Subscriptions)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="eandabrews"
+          data-category="ecommerce"
+          onclick="openProjectModal('eandabrews')">
+          <img
+            src="mockup-eandabrews.webp"
+            alt="E and A Brews specialty artisan coffee subscription and ecommerce storefront"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              E-Commerce
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Artisan Specialty Coffee</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">E&amp;A Brews Roasters</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">DTC Roastery &amp; Recurring Subscription Engine</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                +28% Recurring Subs
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                1-Click Apple Pay
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 7: Queenie’s Essentials (Clean Skincare & Botanical DTC)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="queenies"
+          data-category="ecommerce"
+          onclick="openProjectModal('queenies')">
+          <img
+            src="mockup-queenies.webp"
+            alt="Queenies Essentials organic botanical skincare ecommerce storefront development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              E-Commerce
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Clean Botanical Skincare</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Queenie’s Essentials</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Organic Skincare Storefront &amp; Regimen Guide</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                100% CWV Speed
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                +54s Duration
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <!-- =======================================================================
+             PROJECT CARD 8: Steady Path Homes (Assisted Living Healthcare / SEO)
+             TO REMOVE OR REVERT: Delete or comment out this entire <figure> block.
+             ======================================================================= -->
+        <figure
+          class="archive-card group relative h-[440px] w-[320px] shrink-0 overflow-hidden rounded-[32px] border border-[#f3f0e8]/12 bg-[#101310] cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)] md:h-[560px] md:w-[420px]"
+          data-project="steadypath"
+          data-category="b2b"
+          onclick="openProjectModal('steadypath')">
+          <img
+            src="mockup-steadypath.webp"
+            alt="Steady Path Homes residential living and healthcare facility website development"
+            loading="lazy"
+            class="h-full w-full object-cover object-top opacity-85 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108 group-hover:opacity-100">
+          
+          <div class="pointer-events-none absolute left-5 right-5 top-5 flex items-center justify-between z-10">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ff5a1f] backdrop-blur-md">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
+              B2B &amp; Tech
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/10 bg-[#060706]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/80 backdrop-blur-md transition-all duration-300 group-hover:border-[#ff5a1f]/50 group-hover:text-white">
+              Inspect Build
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060706] via-[#060706]/65 to-transparent p-6 sm:p-7 flex flex-col justify-end pointer-events-none">
+            <span class="text-[10px] font-black uppercase tracking-[0.18em] text-[#ff5a1f]/90">Healthcare &amp; Residential</span>
+            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-[#f3f0e8] mt-1 group-hover:text-white">Steady Path Homes</h3>
+            <p class="text-xs text-[#f3f0e8]/70 mt-1">Assisted Living Digital Infrastructure &amp; SEO</p>
+            <div class="mt-3.5 flex items-center gap-2">
+              <span class="inline-flex items-center rounded-md border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-2.5 py-1 text-[10px] font-bold text-[#ff5a1f]">
+                5.0 ★ Client Video
+              </span>
+              <span class="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold text-[#f3f0e8]/60">
+                1st Page Maps
+              </span>
+            </div>
+          </div>
+        </figure>
+
       </div>
     </section>
 
 
 
-    <section id="work" class="work-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+    <section id="work-metrics" class="work-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12">
       <div class="grid min-h-[100svh] items-center gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
         <div class="work-copy md:col-span-3">
           <p class="section-label mb-8">
@@ -2020,25 +2297,50 @@
         .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
         .from(".pricing-card", { y: 60, opacity: 0, stagger: .08, duration: .55 }, .1);
 
-      // 03. Archive carousel scroll
+      // 03. Archive cards reveal & horizontal scrub
+      gsap.fromTo(".archive-card", 
+        { y: 40, opacity: 0.4 },
+        {
+          y: 0,
+          opacity: 1,
+          rotate: (i) => [-1.5, 1.2, -1.2, 1.5, -1, 1.2, -1.5, 1][i % 8],
+          stagger: 0.05,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".archive-scroll-section",
+            start: "top bottom",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+
+      const getGalleryScroll = () => {
+        const gallery = document.querySelector(".archive-gallery");
+        if (!gallery) return 0;
+        const totalW = gallery.scrollWidth;
+        const viewW = window.innerWidth;
+        if (totalW <= viewW) return 0;
+        const overflow = totalW - viewW + 100;
+        return -((overflow / totalW) * 100);
+      };
+
       gsap.timeline({
         scrollTrigger: {
           trigger: ".archive-scroll-section",
-          start: "top 75%",
-          end: "bottom 20%",
-          scrub: 1
+          start: "top 65%",
+          end: "bottom 15%",
+          scrub: 1,
+          invalidateOnRefresh: true
         }
       })
-        .from(".archive-title", { y: 80, opacity: 0, duration: 0.45 }, 0)
-        .from(".archive-card", {
-          y: 100,
-          opacity: 0,
-          rotate: (i) => [-3, 2, -2, 3, -1, 2, -2, 1][i % 8],
-          stagger: 0.08,
-          duration: 0.65
-        }, 0.12)
-        .to(".archive-gallery", { xPercent: -32, duration: 1 }, 0.25)
-        .to(".archive-card img", { scale: 1.18, duration: 1 }, 0.25);
+        .from(".archive-title", { y: 60, opacity: 0, duration: 0.4 }, 0)
+        .from(".archive-filter-bar", { y: 25, opacity: 0, duration: 0.35 }, 0.05)
+        .to(".archive-gallery", {
+          xPercent: () => getGalleryScroll(),
+          ease: "none",
+          duration: 1
+        }, 0.1);
 
       // 04. Work pinned number & projects
       const work = gsap.timeline({
@@ -2208,6 +2510,92 @@
     }
   </script>
 
+  <!-- ==================== INTERACTIVE PROJECT INSPECTION MODAL ==================== -->
+  <div id="project-modal"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-[#060706]/95 opacity-0 backdrop-blur-2xl transition-opacity duration-500 p-4 sm:p-6 md:p-8"
+    onclick="closeProjectModal()">
+    <div id="project-modal-content"
+      class="relative mx-auto max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-[32px] border border-white/10 bg-[#0e110e] shadow-[0_25px_80px_rgba(0,0,0,0.95)] scale-95 transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+      onclick="event.stopPropagation()">
+      
+      <!-- Modal Close Button -->
+      <button onclick="closeProjectModal()"
+        class="absolute right-4 top-4 sm:right-6 sm:top-6 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-[#ff5a1f] hover:text-[#ff5a1f] cursor-pointer"
+        aria-label="Close project modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <!-- Project Preview Image -->
+        <div class="lg:col-span-7 bg-[#060706] p-6 sm:p-8 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-white/10">
+          <div class="relative w-full overflow-hidden rounded-[20px] border border-white/10 shadow-2xl bg-[#111612]">
+            <img id="project-modal-img" src="" alt="Project detail preview" class="w-full h-auto object-cover max-h-[60vh]">
+          </div>
+        </div>
+
+        <!-- Project Details Column -->
+        <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex items-center gap-2">
+              <span id="project-modal-cat" class="inline-flex items-center rounded-full border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#ff5a1f]">
+                Category
+              </span>
+              <span id="project-modal-tag" class="text-xs font-semibold text-[#f3f0e8]/50 uppercase tracking-wider">
+                Industry
+              </span>
+            </div>
+
+            <h3 id="project-modal-title" class="mt-4 text-2xl sm:text-3xl font-black tracking-tight text-[#f3f0e8]">
+              Project Title
+            </h3>
+            <p id="project-modal-subtitle" class="mt-1 text-sm font-semibold text-[#ff5a1f]">
+              Subtitle
+            </p>
+
+            <div class="mt-6 space-y-4">
+              <div>
+                <h4 class="text-[11px] font-black uppercase tracking-[0.16em] text-[#f3f0e8]/40">The Challenge</h4>
+                <p id="project-modal-challenge" class="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#f3f0e8]/75">
+                  Client challenge description.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-[11px] font-black uppercase tracking-[0.16em] text-[#f3f0e8]/40">The Engineering Solution</h4>
+                <p id="project-modal-solution" class="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#f3f0e8]/75">
+                  Technical solution description.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-[11px] font-black uppercase tracking-[0.16em] text-[#f3f0e8]/40">Measurable Outcome</h4>
+                <div id="project-modal-outcome" class="mt-2 inline-flex items-center gap-2 rounded-xl border border-[#ff5a1f]/30 bg-[#ff5a1f]/10 px-3.5 py-2 text-xs font-bold text-[#ff5a1f]">
+                  Outcome metric
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Direct CTA -->
+          <div class="pt-6 border-t border-white/10">
+            <a id="project-modal-cta" href="https://www.fiverr.com/shayn_web" target="_blank" rel="noopener noreferrer"
+              class="flex w-full items-center justify-center gap-3 rounded-full bg-[#ff5a1f] px-6 py-3.5 text-xs font-black uppercase tracking-[0.16em] text-[#060706] transition-all duration-300 hover:scale-[1.02] hover:bg-[#ff723f] hover:shadow-[0_10px_30px_rgba(255,90,31,0.35)]">
+              <span>Start A Project Like This</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <p class="mt-3 text-center text-[10px] font-medium text-[#f3f0e8]/45">
+              104+ five-star reviews on Fiverr • Direct developer communication
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="video-modal"
     class="fixed inset-0 z-[9999] hidden items-center justify-center bg-[#060706]/95 opacity-0 backdrop-blur-2xl transition-opacity duration-500"
     onclick="closeVideoModal()">
@@ -2231,7 +2619,198 @@
     </div>
   </div>
   <script>
-        function toggleMobileMenu() {
+    // Curated Commercial Client Project Data Dictionary
+    const projectData = {
+      dekopanels: {
+        category: "E-Commerce",
+        tag: "Luxury Architectural Surfaces",
+        title: "DekoPanels",
+        subtitle: "Custom Shopify Theme & Trade Spec Engine",
+        img: "preview-dekopanels.webp",
+        challenge: "Architectural acoustic surface provider needed a high-performance storefront allowing interior designers and architects to inspect texture finishes, calculate room specs, and order trade sample kits.",
+        solution: "Engineered a bespoke Shopify Liquid architecture with an instantaneous finish previewer, dynamic square-footage acoustic spec calculator, and 1-click B2B trade sample checkout.",
+        outcome: "< 0.8s LCP • +34% Trade Architect Sample Orders"
+      },
+      greenhill: {
+        category: "B2B & Tech",
+        tag: "Enterprise IT & Cybersecurity",
+        title: "Greenhill Technology Solutions",
+        subtitle: "B2B Managed IT & Cloud Infrastructure Platform",
+        img: "preview-greenhill.webp",
+        challenge: "Regional cybersecurity MSP was losing enterprise contracts due to an outdated, slow WordPress website that failed to convey rigorous SOC2 compliance and multi-layer cloud defense capabilities.",
+        solution: "Engineered an authoritative, high-contrast B2B corporate platform with interactive security service tier matrices, automated compliance audit intake funnel, and client portal architecture.",
+        outcome: "100/100 Core Web Vitals • 2.4x Enterprise Consultation Bookings"
+      },
+      restaureal: {
+        category: "Hospitality & Booking",
+        tag: "Haute Cuisine & Fine Dining",
+        title: "Restaureal",
+        subtitle: "Direct Table Reservation & Tasting Menus",
+        img: "preview-restaureal.webp",
+        challenge: "Upscale culinary group paid tens of thousands annually in third-party booking commissions (OpenTable/Resy) while suffering from a rigid, non-branded guest reservation experience.",
+        solution: "Created an interactive dining platform featuring animated seasonal tasting menu reveals, sommelier pairing showcases, and an integrated commission-free direct table reservation engine.",
+        outcome: "$18,000+ Annual Commission Fees Saved • 92% Direct Booking Capture"
+      },
+      taylorville: {
+        category: "Hospitality & Booking",
+        tag: "Boutique Hospitality",
+        title: "Taylorville Inn Motel",
+        subtitle: "Direct Room Booking Platform & Guest Portal",
+        img: "preview-taylorville.webp",
+        challenge: "Established boutique motel was losing up to 22% of revenue to Expedia and Booking.com commissions because their legacy website lacked mobile-friendly direct room selection.",
+        solution: "Architected a high-speed, mobile-first motel platform featuring interactive suite tours, local tourist amenity guides, verified reviews, and a 2-step direct room reservation engine.",
+        outcome: "+42% Surge in Direct Bookings • Zero Third-Party Commission Lost"
+      },
+      maison: {
+        category: "Hospitality & Booking",
+        tag: "Luxury Vineyard & Estate",
+        title: "Maison Murri Estate",
+        subtitle: "Private Wine Allocations & Tasting Club",
+        img: "preview-maison.webp",
+        challenge: "Historic California vineyard required a digital home where VIP wine collectors could access limited-release vintages and book private vineyard tasting experiences.",
+        solution: "Crafted an editorial luxury estate portal featuring gated member vintage allocation vaults, seasonal harvest storytelling, and private event reservation scheduling.",
+        outcome: "Vintage Allocation Sold Out in 72 Hours • Praised for Unhurried Luxury Aesthetic"
+      },
+      eandabrews: {
+        category: "E-Commerce",
+        tag: "Artisan Specialty Coffee",
+        title: "E&A Brews Roasters",
+        subtitle: "DTC Roastery & Recurring Subscription Engine",
+        img: "preview-eandabrews.webp",
+        challenge: "Independent specialty coffee roaster needed to build predictable recurring monthly revenue through a customizable direct-to-consumer coffee bean subscription program.",
+        solution: "Engineered an intuitive subscription builder allowing customers to select bean origin, roast profile, grind size, and delivery frequency with 1-click mobile Apple Pay checkout.",
+        outcome: "+28% Recurring Monthly Subscribers • -31% Mobile Cart Abandonment"
+      },
+      queenies: {
+        category: "E-Commerce",
+        tag: "Clean Botanical Skincare",
+        title: "Queenie’s Essentials",
+        subtitle: "Organic Skincare Storefront & Regimen Guide",
+        img: "preview-queenies.webp",
+        challenge: "Botanical organic skincare boutique struggled with slow page speeds and high mobile drop-off caused by bloated third-party Shopify apps and unoptimized imagery.",
+        solution: "Cleaned codebase of app bloat, custom-coded lightweight botanical ingredient tooltips, and engineered an intuitive mobile skincare regimen quiz leading straight to checkout.",
+        outcome: "100/100 Mobile Performance Score • +54s Longer Average Session Duration"
+      },
+      steadypath: {
+        category: "B2B & Tech",
+        tag: "Healthcare & Senior Care",
+        title: "Steady Path Homes",
+        subtitle: "Assisted Living Digital Infrastructure & Local SEO",
+        img: "preview-steadypath.webp",
+        challenge: "Residential care home needed to establish deep, immediate trust with families seeking care for elderly relatives, while streamlining tour inquiries and local physician referrals.",
+        solution: "Crafted a warm, accessible, ADA-compliant digital experience showcasing facility accommodations, staff certifications, transparent pricing guidelines, and 1-click tour booking.",
+        outcome: "5.0 ★ Client Video Review • 1st Page Google Map Pack Placement"
+      }
+    };
+
+    function openProjectModal(id) {
+      const data = projectData[id];
+      if (!data) return;
+      
+      const modal = document.getElementById('project-modal');
+      const content = document.getElementById('project-modal-content');
+      
+      document.getElementById('project-modal-img').src = data.img;
+      document.getElementById('project-modal-cat').textContent = data.category;
+      document.getElementById('project-modal-tag').textContent = data.tag;
+      document.getElementById('project-modal-title').textContent = data.title;
+      document.getElementById('project-modal-subtitle').textContent = data.subtitle;
+      document.getElementById('project-modal-challenge').textContent = data.challenge;
+      document.getElementById('project-modal-solution').textContent = data.solution;
+      document.getElementById('project-modal-outcome').textContent = data.outcome;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      void modal.offsetWidth;
+      modal.classList.remove('opacity-0');
+      content.classList.remove('scale-95');
+      content.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('project-modal');
+      const content = document.getElementById('project-modal-content');
+      if (!modal) return;
+      
+      modal.classList.add('opacity-0');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }, 400);
+    }
+
+    // Dynamic Gallery Counts (self-healing if any card is removed or added)
+    function updateGalleryCounts() {
+      const cards = document.querySelectorAll('.archive-card');
+      const allCount = cards.length;
+      let b2bCount = 0;
+      let ecomCount = 0;
+      let hospCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (cat === 'b2b') b2bCount++;
+        else if (cat === 'ecommerce') ecomCount++;
+        else if (cat === 'hospitality') hospCount++;
+      });
+
+      const elAll = document.querySelector('[data-count="all"]');
+      const elB2b = document.querySelector('[data-count="b2b"]');
+      const elEcom = document.querySelector('[data-count="ecommerce"]');
+      const elHosp = document.querySelector('[data-count="hospitality"]');
+
+      if (elAll) elAll.textContent = `(${String(allCount).padStart(2, '0')})`;
+      if (elB2b) elB2b.textContent = `(${String(b2bCount).padStart(2, '0')})`;
+      if (elEcom) elEcom.textContent = `(${String(ecomCount).padStart(2, '0')})`;
+      if (elHosp) elHosp.textContent = `(${String(hospCount).padStart(2, '0')})`;
+    }
+
+    // Category Filter Switcher
+    function setWorkFilter(cat) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-filter') === cat;
+        if (isMatch) {
+          btn.classList.add('border-[#ff5a1f]/50', 'bg-[#ff5a1f]/15', 'text-[#ff5a1f]');
+          btn.classList.remove('border-white/10', 'bg-white/[0.03]', 'text-[#f3f0e8]/65');
+        } else {
+          btn.classList.remove('border-[#ff5a1f]/50', 'bg-[#ff5a1f]/15', 'text-[#ff5a1f]');
+          btn.classList.add('border-white/10', 'bg-white/[0.03]', 'text-[#f3f0e8]/65');
+        }
+      });
+
+      const cards = document.querySelectorAll('.archive-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        const show = (cat === 'all' || cardCat === cat);
+        if (show) {
+          card.style.display = '';
+          card.style.opacity = '1';
+          card.style.pointerEvents = 'auto';
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+          card.style.pointerEvents = 'none';
+        }
+      });
+
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    }
+
+    // Auto-initialize gallery counts on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateGalleryCounts);
+    } else {
+      updateGalleryCounts();
+    }
+
+    function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
       if (menu) {
         const isHidden = menu.classList.contains('pointer-events-none');
@@ -2284,7 +2863,10 @@
       }, 500);
     }
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeVideoModal();
+      if (e.key === 'Escape') {
+        closeVideoModal();
+        closeProjectModal();
+      }
     });
   </script>
 
