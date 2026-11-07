@@ -555,13 +555,6 @@
         transform: translate(-50%, -46%) scale(0.82) !important;
       }
 
-      .brand-words {
-        gap: 1.25rem;
-      }
-
-      .brand-word {
-        font-size: clamp(2.75rem, 8vw, 4.5rem) !important;
-      }
     }
 
     /* Ultra-compact Phones (<= 480px: iPhone SE, 12 mini, Galaxy S) */
@@ -583,10 +576,6 @@
       .hero-trust {
         width: 100% !important;
         justify-content: space-between;
-      }
-
-      .brand-word {
-        font-size: 2.5rem !important;
       }
 
       .section-label {
@@ -614,9 +603,6 @@
         opacity: 0.45;
       }
 
-      .brand-word {
-        font-size: 2.75rem !important;
-      }
     }
 
     /* Ultra-Wide Monitors & High-Resolution Displays (>= 1441px, 2K, 4K) */
@@ -632,7 +618,6 @@
       header,
       .hero-section,
       .services-section,
-      .brand-section,
       .work-section,
       .pricing-section,
       .partners-section,
@@ -682,10 +667,6 @@
 
       .hero-copy {
         max-width: 55%;
-      }
-
-      .brand-word {
-        font-size: 3rem !important;
       }
 
       .grid-cols-2 {
@@ -1588,47 +1569,9 @@
 
 
 
-    <!-- ==================== 07. BRAND PHILOSOPHY ==================== -->
-    <section id="brand"
-      class="brand-section relative flex min-h-[100svh] items-center overflow-hidden px-5 py-24 md:px-8 lg:px-12">
-      <h2
-        class="brand-drift wordmark pointer-events-none absolute -top-16 left-0 text-[6rem] font-black leading-none text-[#f3f0e8]/10 sm:text-[9rem] md:text-[13rem] lg:text-[18rem]">
-        Shayan.
-      </h2>
-
-      <div class="mx-auto grid w-full max-w-6xl gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
-        <div class="md:col-span-4">
-          <p class="section-label">
-            Philosophy
-          </p>
-          <p data-reveal="" class="mt-8 max-w-sm text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
-            A good website doesn't just sit there looking pretty. It builds trust within seconds and turns curious visitors into paying clients. I focus on clean architecture, fast load times, and direct messaging that sells.
-          </p>
-        </div>
-
-        <div class="brand-words grid gap-6 md:col-span-7 md:col-start-6">
-          <p class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
-            design
-          </p>
-          <p class="brand-word text-right text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
-            develop
-          </p>
-          <p class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
-            optimize.
-          </p>
-          <p class="brand-word text-right text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
-            launch
-          </p>
-          <p class="brand-word text-6xl font-semibold tracking-[-0.08em] md:text-8xl">
-            grow
-          </p>
-        </div>
-      </div>
-    </section>
 
 
-
-    <!-- ==================== 08. EFFORTLESS PROCESS ==================== -->
+    <!-- ==================== 07. TRANSPARENT 4-STEP SPRINT PROCESS ==================== -->
     <section class="process-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12">
       <figure
         class="parallax-image parallax-slow pointer-events-none right-4 top-24 h-28 w-44 rotate-[4deg] md:right-8 md:top-20 md:h-56 md:w-80">
@@ -1701,7 +1644,7 @@
 
 
 
-    <!-- ==================== 09. DIRECT ANSWERS & FAQ ==================== -->
+    <!-- ==================== 08. DIRECT ANSWERS & FAQ ==================== -->
     <!-- FAQ SECTION (Answer Engine Optimization / AEO) -->
     <section id="faq" class="faq-section relative min-h-[100svh] px-5 py-24 md:px-8 lg:px-12">
       <div class="grid gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
@@ -1800,7 +1743,7 @@
 
 
 
-    <!-- ==================== 10. HIGH-CONVERSION CLOSE & FOOTER ==================== -->
+    <!-- ==================== 09. HIGH-CONVERSION CLOSE & FOOTER ==================== -->
     <!-- FOOTER -->
     <footer id="footer" class="footer-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12">
       <div class="grid gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
@@ -2047,36 +1990,6 @@
         .to(".hero-card:nth-child(3)", { x: 54, y: 22, rotate: 22, duration: 1 }, 0)
         .to(".hero-card:nth-child(4)", { x: 8, y: 12, rotate: 0, duration: 1 }, 0);
 
-      // Studio pinned word rhythm
-      const brand = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".brand-section",
-          start: "top top",
-          end: "+=110%",
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1
-        }
-      });
-
-      brand
-        .fromTo(".brand-drift", { xPercent: 4 }, { xPercent: -22, duration: 1 }, 0)
-        .fromTo(".brand-word", {
-          opacity: 0,
-          y: 80,
-          x: (i) => (i % 2 ? -90 : 90)
-        }, {
-          opacity: 1,
-          y: 0,
-          x: 0,
-          stagger: .08,
-          duration: .6
-        }, .08)
-        .to(".brand-word", {
-          x: (i) => (i % 2 ? -34 : 34),
-          stagger: .04,
-          duration: .45
-        }, .64);
 
       // Services reveal and image strip motion
       gsap.timeline({
@@ -2223,17 +2136,17 @@
         .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
         .from(".pricing-card", { y: 60, opacity: 0, stagger: .08, duration: .55 }, .1);
 
-      // Contact / footer
+      // FAQ section reveal
       gsap.timeline({
         scrollTrigger: {
-          trigger: ".contact-section",
-          start: "top 62%",
-          end: "bottom 34%",
+          trigger: ".faq-section",
+          start: "top 72%",
+          end: "bottom 80%",
           scrub: 1
         }
       })
-        .from(".contact-form > *", { y: 36, opacity: 0, stagger: .07, duration: .45 }, 0)
-        .from(".faq-row", { y: 38, opacity: 0, stagger: .08, duration: .45 }, .12);
+        .from(".faq-copy", { y: 40, opacity: 0, duration: 0.4 }, 0)
+        .from(".faq-list details", { y: 30, opacity: 0, stagger: 0.08, duration: 0.5 }, 0.1);
 
       gsap.timeline({
         scrollTrigger: {
