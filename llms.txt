@@ -1,9 +1,9 @@
 # Shayan — Freelance Web Consultant & B2B Web Developer
 
-> Freelance Web Consultant and Full-Stack Web Developer with 6+ years of experience helping founders, brands, and businesses build high-performance digital experiences designed to drive growth, increase conversions, and create lasting impact. Top-Rated on Fiverr with 104+ verified 5.0-star client reviews.
+> Freelance Web Consultant and Full-Stack Web Developer with 6+ years of experience building custom websites and web applications for founders and growing businesses. Fast page loads, clean code, and zero bloated templates. Top-Rated on Fiverr with 104+ verified 5.0-star client reviews.
 
 ## Core Services
-- [Web Development](https://shayn-builds.runs-on.dev/#services): Modern, scalable websites crafted for speed and exceptional user experiences. Specialized in React and custom WordPress.
+- [Web Development](https://shayn-builds.runs-on.dev/#services): High-speed websites tailored for business results. Specialized in React and custom WordPress.
 - [React Development](https://shayn-builds.runs-on.dev/react-development.html): High-performance Single Page Applications (SPAs), component-driven architectures, SaaS frontends, and dynamic web interfaces.
 - [WordPress Development](https://shayn-builds.runs-on.dev/wordpress-development.html): Secure, fast, native custom themes and modern headless WordPress systems.
 - [Core Web Vitals & Speed Optimization](https://shayn-builds.runs-on.dev/#services): Deep performance audits, asset compression, and millisecond loading architectures.
