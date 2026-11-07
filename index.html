@@ -1876,49 +1876,7 @@
           </a>
         </div>
 
-        <!-- <div class="grid gap-10 md:col-span-2 md:col-start-11">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
-              Social
-            </p>
-            <div class="mt-6 space-y-4 text-sm font-bold text-[#f3f0e8]/72">
-              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
-                LinkedIn
-                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
-                  add↗
-                </span>
-              </a>
-              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
-                GitHub
-                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
-                  ↗
-                </span>
-              </a>
-              <a href="#" class="group flex items-center justify-between transition hover:text-[#f3f0e8]">
-                Fiverr
-                <span class="text-[#f3f0e8]/28 transition group-hover:translate-x-1 group-hover:text-[#f3f0e8]">
-                  ↗
-                </span>
-              </a>
-            </div>
-          </div> -->
-
-        <!-- <div>
-            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f0e8]/36">
-              Legal
-            </p>
-            <div class="mt-6 space-y-3 text-sm font-semibold text-[#f3f0e8]/50">
-              <a href="#" class="block transition hover:text-[#f3f0e8]">
-                Privacy Policy
-              </a>
-              <a href="#" class="block transition hover:text-[#f3f0e8]">
-                Terms of Service
-              </a>
-              <a href="#" class="block transition hover:text-[#f3f0e8]">
-                404
-              </a>
-            </div>
-          </div> -->
+        <!-- Social & Legal commented out -->
       </div>
 
       <div class="md:col-span-12">
@@ -2021,7 +1979,7 @@
         });
       });
 
-      // Hero pinned cinematic transformation
+      // 01. Hero pinned cinematic transformation
       const hero = gsap.timeline({
         scrollTrigger: {
           trigger: ".hero-section",
@@ -2043,8 +2001,82 @@
         .to(".hero-card:nth-child(3)", { x: 54, y: 22, rotate: 22, duration: 1 }, 0)
         .to(".hero-card:nth-child(4)", { x: 8, y: 12, rotate: 0, duration: 1 }, 0);
 
+      // 02. Testimonials reveal (pricing-section)
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".pricing-section",
+          start: "top 75%",
+          end: "bottom 90%",
+          scrub: 1
+        }
+      })
+        .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
+        .from(".pricing-card", { y: 60, opacity: 0, stagger: .08, duration: .55 }, .1);
 
-      // Services reveal and image strip motion
+      // 03. Archive carousel scroll
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".archive-scroll-section",
+          start: "top 75%",
+          end: "bottom 20%",
+          scrub: 1
+        }
+      })
+        .from(".archive-title", { y: 80, opacity: 0, duration: 0.45 }, 0)
+        .from(".archive-card", {
+          y: 100,
+          opacity: 0,
+          rotate: (i) => [-3, 2, -2, 3, -1, 2, -2, 1][i % 8],
+          stagger: 0.08,
+          duration: 0.65
+        }, 0.12)
+        .to(".archive-gallery", { xPercent: -32, duration: 1 }, 0.25)
+        .to(".archive-card img", { scale: 1.18, duration: 1 }, 0.25);
+
+      // 04. Work pinned number & projects
+      const work = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: "+=120%",
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1
+        }
+      });
+
+      work
+        .from(".work-copy", { x: -80, opacity: 0, duration: .4 }, 0)
+        .fromTo(".masked-number", { scale: .82, y: 80, backgroundPosition: "50% 28%" }, { scale: 1.1, y: -50, backgroundPosition: "50% 74%", duration: 1 }, 0)
+        .from(".project-card", { y: 80, opacity: 0, rotate: 0, stagger: .1, duration: .4 }, .15)
+        .to(".project-card", { y: -40, x: (i) => (i ? 42 : -34), duration: .8 }, .45);
+
+      // 05. Experience editorial (partners-section)
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".partners-section",
+          start: "top 72%",
+          end: "bottom 28%",
+          scrub: 1
+        }
+      })
+        .fromTo(".partners-heading", { yPercent: 10, opacity: 0.06 }, { yPercent: -16, opacity: 0.12, duration: 1 }, 0)
+        .from(".partners-section .section-label", { y: 24, opacity: 0, duration: 0.35 }, 0.08)
+        .from(".partners-section h2:not(.partners-heading)", { y: 70, opacity: 0, duration: 0.55 }, 0.12)
+        .from(".partner-logos .note-card", {
+          y: 100,
+          opacity: 0,
+          rotate: (i) => [-2, 2, -1, 1, -2][i],
+          stagger: 0.08,
+          duration: 0.7
+        }, 0.2)
+        .to(".partner-logos .note-card", {
+          y: (i) => [-24, 18, -12, 14, -18][i],
+          stagger: 0.04,
+          duration: 0.55
+        }, 0.62);
+
+      // 06. Services reveal and image strip motion
       gsap.timeline({
         scrollTrigger: {
           trigger: ".services-section",
@@ -2057,33 +2089,7 @@
         .from(".service-card", { y: 42, opacity: 0, stagger: .08, duration: .45 }, .16)
         .to(".strip-image", { xPercent: -14, scale: 1.22, duration: .8 }, 0);
 
-      // Studio pinned word rhythm (Desktop only pinning to keep mobile smooth)
-      const brand = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".brand-section",
-          start: "top top",
-          end: "+=100%",
-          scrub: 1,
-          pin: window.innerWidth >= 768,
-          anticipatePin: 1
-        }
-      });
-
-      brand
-        .fromTo(".brand-drift", { xPercent: 4 }, { xPercent: -20, duration: 1 }, 0)
-        .fromTo(".brand-word", {
-          opacity: 0.2,
-          y: 40,
-          x: (i) => (i % 2 ? -60 : 60)
-        }, {
-          opacity: 1,
-          y: 0,
-          x: 0,
-          stagger: 0.08,
-          duration: 0.6
-        }, 0.08);
-
-      // Parallax media
+      // Parallax media (across sections)
       gsap.utils.toArray(".parallax-image").forEach((item) => {
         const isFast = item.classList.contains("parallax-fast");
         const section = item.closest("section");
@@ -2115,7 +2121,7 @@
         }
       });
 
-      // Stats stagger
+      // 07. Who I Work With stats stagger
       gsap.from(".stat-grid .note-card", {
         y: 52,
         opacity: 0,
@@ -2128,70 +2134,31 @@
         }
       });
 
-      // Archive scroll
-      gsap.timeline({
+      // 08. Studio word rhythm (Built for what's next - natural scrub, no pin to eliminate overlap)
+      const brand = gsap.timeline({
         scrollTrigger: {
-          trigger: ".archive-scroll-section",
+          trigger: ".brand-section",
           start: "top 75%",
-          end: "bottom 20%",
+          end: "bottom 25%",
           scrub: 1
-        }
-      })
-        .from(".archive-title", { y: 80, opacity: 0, duration: 0.45 }, 0)
-        .from(".archive-card", {
-          y: 100,
-          opacity: 0,
-          rotate: (i) => [-3, 2, -2, 3, -1, 2, -2, 1][i % 8],
-          stagger: 0.08,
-          duration: 0.65
-        }, 0.12)
-        .to(".archive-gallery", { xPercent: -32, duration: 1 }, 0.25)
-        .to(".archive-card img", { scale: 1.18, duration: 1 }, 0.25);
-
-      // Work pinned number
-      const work = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".work-section",
-          start: "top top",
-          end: "+=120%",
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1
         }
       });
 
-      work
-        .from(".work-copy", { x: -80, opacity: 0, duration: .4 }, 0)
-        .fromTo(".masked-number", { scale: .82, y: 80, backgroundPosition: "50% 28%" }, { scale: 1.1, y: -50, backgroundPosition: "50% 74%", duration: 1 }, 0)
-        .from(".project-card", { y: 80, opacity: 0, rotate: 0, stagger: .1, duration: .4 }, .15)
-        .to(".project-card", { y: -40, x: (i) => (i ? 42 : -34), duration: .8 }, .45);
-
-      // Field notes editorial
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".partners-section",
-          start: "top 72%",
-          end: "bottom 28%",
-          scrub: 1
-        }
-      })
-        .fromTo(".partners-heading", { yPercent: 10, opacity: 0.06 }, { yPercent: -16, opacity: 0.12, duration: 1 }, 0)
-        .from(".partners-section .section-label", { y: 24, opacity: 0, duration: 0.35 }, 0.08)
-        .from(".partners-section h2:not(.partners-heading)", { y: 70, opacity: 0, duration: 0.55 }, 0.12)
-        .from(".partner-logos .note-card", {
-          y: 100,
-          opacity: 0,
-          rotate: (i) => [-2, 2, -1, 1, -2][i],
+      brand
+        .fromTo(".brand-drift", { xPercent: 4 }, { xPercent: -20, duration: 1 }, 0)
+        .fromTo(".brand-word", {
+          opacity: 0.2,
+          y: 40,
+          x: (i) => (i % 2 ? -60 : 60)
+        }, {
+          opacity: 1,
+          y: 0,
+          x: 0,
           stagger: 0.08,
-          duration: 0.7
-        }, 0.2)
-        .to(".partner-logos .note-card", {
-          y: (i) => [-24, 18, -12, 14, -18][i],
-          stagger: 0.04,
-          duration: 0.55
-        }, 0.62);
+          duration: 0.6
+        }, 0.08);
 
-      // Timeline process
+      // 09. Timeline 4-step process
       gsap.timeline({
         scrollTrigger: {
           trigger: ".process-section",
@@ -2203,20 +2170,7 @@
         .to(".timeline-bar", { scaleX: 1, stagger: .12, duration: .6 }, 0)
         .from(".process-columns > div", { y: 38, opacity: 0, stagger: .08, duration: .45 }, .25);
 
-      // Testimonials reveal
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".pricing-section",
-          start: "top 75%",
-          end: "bottom 90%",
-          scrub: 1
-        }
-      })
-        .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
-        .from(".pricing-card", { y: 60, opacity: 0, stagger: .08, duration: .55 }, .1);
-
-
-
+      // 10. Footer reveal
       gsap.timeline({
         scrollTrigger: {
           trigger: ".footer-section",
