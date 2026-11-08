@@ -405,6 +405,20 @@
       background: #060706;
     }
 
+    .spotlight-viewport {
+      height: 320px;
+    }
+    @media (min-width: 640px) {
+      .spotlight-viewport {
+        height: 380px;
+      }
+    }
+    @media (min-width: 768px) {
+      .spotlight-viewport {
+        height: 460px;
+      }
+    }
+
     .browser-scroll-img {
       width: 100%;
       height: auto;
@@ -415,13 +429,35 @@
     }
 
     .archive-card:hover .browser-scroll-img {
-      transform: translateY(calc(-100% + 380px));
+      transform: translateY(calc(-100% + 420px));
       transition: transform 7.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
-
+    @media (min-width: 640px) {
+      .archive-card:hover .browser-scroll-img {
+        transform: translateY(calc(-100% + 480px));
+        transition: transform 8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
     @media (min-width: 768px) {
       .archive-card:hover .browser-scroll-img {
-        transform: translateY(calc(-100% + 470px));
+        transform: translateY(calc(-100% + 520px));
+        transition: transform 8.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+
+    .spotlight-card:hover .browser-scroll-img {
+      transform: translateY(calc(-100% + 320px));
+      transition: transform 7.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    @media (min-width: 640px) {
+      .spotlight-card:hover .browser-scroll-img {
+        transform: translateY(calc(-100% + 380px));
+        transition: transform 8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+    @media (min-width: 768px) {
+      .spotlight-card:hover .browser-scroll-img {
+        transform: translateY(calc(-100% + 460px));
         transition: transform 8.5s cubic-bezier(0.2, 0.8, 0.2, 1);
       }
     }
@@ -1154,7 +1190,48 @@
 
 
 
-    <!-- ==================== FEATURED CLIENT SPOTLIGHT (ABOVE SELECTED WORK) ==================== -->
+    <!-- ==================== 03. SELECTED WORK (GITHUB & EDITORIAL) ==================== -->
+    <section id="work" class="work-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12 bg-[#060706] border-b border-white/5">
+      <div class="grid min-h-[100svh] items-center gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14 max-w-6xl mx-auto">
+        <div class="work-copy md:col-span-3">
+          <p class="section-label mb-8">
+            Projects
+          </p>
+          <h2 class="text-5xl font-semibold leading-[0.95] tracking-[-0.08em] md:text-6xl text-[#f3f0e8]">
+            Selected Work
+          </h2>
+          <p class="mt-6 max-w-72 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
+            Custom React tools, ecommerce storefronts, and marketing sites built for speed and conversions.
+          </p>
+          <a href="https://github.com/shayn468" target="_blank" rel="noopener noreferrer"
+            class="magnetic-button mt-8 inline-flex rounded-full border border-[#f3f0e8]/12 px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#f3f0e8] hover:border-[#ff5a1f] hover:text-[#ff5a1f] transition-colors">
+            View GitHub
+          </a>
+        </div>
+
+        <div class="relative md:col-span-7 md:col-start-4">
+          <div class="relative flex min-h-[520px] items-center justify-center">
+            <span
+              class="masked-number select-none text-[13rem] font-black leading-none tracking-[-0.09em] md:text-[24rem] lg:text-[29rem]"
+              style="--number-image: url('Cafe.png'); background-position: 20% 80%;">
+              06
+            </span>
+          </div>
+        </div>
+
+        <div data-reveal="" class="md:col-span-2">
+          <p class="text-xs font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/62">
+            Roles
+          </p>
+          <p class="mt-8 text-sm font-medium leading-[1.7] text-[#f3f0e8]/50">
+            Full-Stack Development,
+            Frontend, UI/UX
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED CLIENT SPOTLIGHT ==================== -->
     <section id="spotlight" class="relative overflow-hidden px-5 py-24 md:px-8 lg:px-12 bg-[#060706] border-b border-white/5">
       <div class="mx-auto max-w-6xl">
         <div class="mb-14 max-w-3xl" data-reveal="">
@@ -1170,9 +1247,9 @@
         <!-- Side-by-Side Duo Grid -->
         <div class="grid gap-8 md:grid-cols-2">
           <!-- Card 1: NewGen Pickleball Club -->
-          <figure data-reveal="" class="group relative rounded-[28px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-[1.02] hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] flex flex-col">
+          <figure data-reveal="" class="spotlight-card group relative rounded-[28px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-[1.02] hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] flex flex-col" data-project="pickleball">
             <!-- macOS Header -->
-            <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 select-none shrink-0">
+            <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 select-none shrink-0 z-10">
               <div class="flex items-center gap-1.5">
                 <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f56]"></span>
                 <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
@@ -1185,13 +1262,21 @@
               <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">React App</span>
             </div>
 
-            <!-- Uncropped Mockup Preview -->
-            <div class="relative overflow-hidden bg-[#060706] min-h-[280px] sm:min-h-[380px] md:min-h-[440px] flex items-center justify-center">
-              <img src="mockup-pickleball.webp" alt="NewGen Pickleball Club custom booking platform" width="1280" height="1295" loading="eager" class="w-full h-auto block object-cover transform transition-transform duration-700 group-hover:scale-[1.02]">
+            <!-- Scrollable Mockup Viewport -->
+            <div class="browser-frame-viewport spotlight-viewport relative overflow-hidden bg-[#060706]">
+              <img src="mockup-pickleball-roll.webp" alt="NewGen Pickleball Club custom booking platform full page roll" width="1280" height="7191" loading="eager" class="browser-scroll-img w-full h-auto block">
+              
+              <!-- Hover Preview Pill -->
+              <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f3f0e8]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-ping"></span>
+                  Hovering: Full Page Roll
+                </span>
+              </div>
             </div>
 
             <!-- Dedicated Metadata Footer -->
-            <div class="border-t border-white/10 bg-[#111411] px-6 py-4 shrink-0">
+            <div class="border-t border-white/10 bg-[#111411] px-6 py-4 shrink-0 z-10">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-black uppercase tracking-[0.16em] text-[#ff5a1f]">Sports &amp; Athletics</span>
                 <span class="text-[10px] font-mono text-[#f3f0e8]/50">CourtReserve App</span>
@@ -1202,9 +1287,9 @@
           </figure>
 
           <!-- Card 2: Quantum REI Funding -->
-          <figure data-reveal="" class="group relative rounded-[28px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-[1.02] hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] flex flex-col">
+          <figure data-reveal="" class="spotlight-card group relative rounded-[28px] border border-[#f3f0e8]/15 bg-[#0e110e] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 ease-out hover:scale-[1.02] hover:border-[#ff5a1f]/60 hover:shadow-[0_25px_60px_rgba(255,90,31,0.22)] flex flex-col" data-project="quantum">
             <!-- macOS Header -->
-            <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 select-none shrink-0">
+            <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 select-none shrink-0 z-10">
               <div class="flex items-center gap-1.5">
                 <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f56]"></span>
                 <span class="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]"></span>
@@ -1217,13 +1302,21 @@
               <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff5a1f]">Real Estate</span>
             </div>
 
-            <!-- Uncropped Mockup Preview -->
-            <div class="relative overflow-hidden bg-[#060706] min-h-[280px] sm:min-h-[380px] md:min-h-[440px] flex items-center justify-center">
-              <img src="mockup-quantum.webp" alt="Quantum REI Funding Rhonda Hines commercial lending platform" width="1280" height="1017" loading="eager" class="w-full h-auto block object-cover transform transition-transform duration-700 group-hover:scale-[1.02]">
+            <!-- Scrollable Mockup Viewport -->
+            <div class="browser-frame-viewport spotlight-viewport relative overflow-hidden bg-[#060706]">
+              <img src="mockup-quantum-roll.webp" alt="Quantum REI Funding Rhonda Hines commercial lending platform full page roll" width="1280" height="4489" loading="eager" class="browser-scroll-img w-full h-auto block">
+              
+              <!-- Hover Preview Pill -->
+              <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-black/85 backdrop-blur-md border border-white/10 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#f3f0e8]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-ping"></span>
+                  Hovering: Full Page Roll
+                </span>
+              </div>
             </div>
 
             <!-- Dedicated Metadata Footer -->
-            <div class="border-t border-white/10 bg-[#111411] px-6 py-4 shrink-0">
+            <div class="border-t border-white/10 bg-[#111411] px-6 py-4 shrink-0 z-10">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-black uppercase tracking-[0.16em] text-[#ff5a1f]">Commercial Real Estate</span>
                 <span class="text-[10px] font-mono text-[#f3f0e8]/50">Private Lending</span>
@@ -1238,11 +1331,11 @@
 
 
 
-    <!-- ==================== 03. COMMERCIAL WORK & DELIVERABLES ==================== -->
-    <section id="work" class="archive-scroll-section relative overflow-hidden px-5 py-24 md:px-8 lg:px-12">
+    <!-- ==================== 04. COMMERCIAL WORK & DELIVERABLES ==================== -->
+    <section id="commercial-work" class="archive-scroll-section relative overflow-hidden px-5 py-24 md:px-8 lg:px-12">
       <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
         <div class="md:col-span-3">
-          <p class="section-label">Selected Work</p>
+          <p class="section-label">Commercial Deliverables</p>
           <p class="mt-8 max-w-64 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
             Recent commercial client websites and custom platforms. Hover any card to preview the full-page layout roll.
           </p>
@@ -1253,53 +1346,15 @@
             class="archive-title text-[54px] font-black leading-[0.9] tracking-[-0.08em] text-[#f3f0e8] md:text-[86px] lg:text-[112px]">
             Built clean, fast, and easy to maintain.
           </h2>
-
-          <!-- Interactive Project Quick-Jump Navigator -->
-          <div class="project-jump-nav mt-10 flex flex-wrap items-center gap-2 sm:gap-3">
-            <button type="button" onclick="jumpToProject(0)" class="jump-pill active-pill inline-flex items-center gap-2 rounded-full border border-[#ff5a1f]/50 bg-[#ff5a1f]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#ff5a1f] transition-all duration-300 hover:border-[#ff5a1f] cursor-pointer" data-jump="0">
-              <span class="h-1.5 w-1.5 rounded-full bg-[#ff5a1f] animate-pulse"></span>
-              <span>01. Florida Pinecone</span>
-            </button>
-            <button type="button" onclick="jumpToProject(1)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="1">
-              <span>02. Maison Murri</span>
-            </button>
-            <button type="button" onclick="jumpToProject(2)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="2">
-              <span>03. Marbleine Events</span>
-            </button>
-            <button type="button" onclick="jumpToProject(3)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="3">
-              <span>04. Taylorville Inn</span>
-            </button>
-            <button type="button" onclick="jumpToProject(4)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="4">
-              <span>05. Haven Salon</span>
-            </button>
-            <button type="button" onclick="jumpToProject(5)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="5">
-              <span>06. Amazing World</span>
-            </button>
-            <button type="button" onclick="jumpToProject(6)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="6">
-              <span>07. UMG Underground</span>
-            </button>
-            <button type="button" onclick="jumpToProject(7)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="7">
-              <span>08. Pickleball Club</span>
-            </button>
-            <button type="button" onclick="jumpToProject(8)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="8">
-              <span>09. Quantum REI</span>
-            </button>
-            <button type="button" onclick="jumpToProject(9)" class="jump-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f3f0e8]/65 transition-all duration-300 hover:border-white/30 hover:text-white cursor-pointer" data-jump="9">
-              <span>10. Live Demo</span>
-            </button>
-          </div>
         </div>
       </div>
 
       <!-- =======================================================================
-           COMMERCIAL CLIENT WORK GALLERY
-           HOW TO REMOVE OR REVERT ANY CARD:
+           COMMERCIAL CLIENT WORK GALLERY (2-COLUMN RESPONSIVE MULTI-ROW GRID)
            Each card below is an independent, modular <figure> block.
-           - To remove a project: Delete or comment out its entire <figure>...</figure> block.
-           - To revert: Uncomment the <figure>...</figure> block.
-           The gallery width, hover auto-scroll, and horizontal GSAP track adapt automatically!
+           All 10 mockups are visible in a responsive 2-column grid.
            ======================================================================= -->
-      <div class="archive-gallery mt-16 sm:mt-20 flex gap-6 will-change-transform pb-4">
+      <div class="archive-gallery mt-14 sm:mt-18 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto pb-4">
 
         <!-- =======================================================================
              PROJECT CARD 1: Florida Pinecone Company (E-Commerce / Botanicals)
@@ -1307,7 +1362,7 @@
              ======================================================================= -->
         <figure
           id="work-card-0"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="floridapinecone">
           
           <!-- Browser Frame Top Bar -->
@@ -1361,7 +1416,7 @@
              ======================================================================= -->
         <figure
           id="work-card-1"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="maisonmurri">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1410,7 +1465,7 @@
              ======================================================================= -->
         <figure
           id="work-card-2"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="marbleine">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1459,7 +1514,7 @@
              ======================================================================= -->
         <figure
           id="work-card-3"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="taylorville">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1508,7 +1563,7 @@
              ======================================================================= -->
         <figure
           id="work-card-4"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="havensalon">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1557,7 +1612,7 @@
              ======================================================================= -->
         <figure
           id="work-card-5"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="amazingworld">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1606,7 +1661,7 @@
              ======================================================================= -->
         <figure
           id="work-card-6"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="umgunderground">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1655,7 +1710,7 @@
              ======================================================================= -->
         <figure
           id="work-card-7"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="pickleball">
           
           <!-- Browser Frame Top Bar -->
@@ -1709,7 +1764,7 @@
              ======================================================================= -->
         <figure
           id="work-card-8"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           data-project="quantum">
           
           <!-- Browser Frame Top Bar -->
@@ -1763,7 +1818,7 @@
              ======================================================================= -->
         <figure
           id="work-card-9"
-          class="archive-card group relative h-[480px] w-[330px] sm:w-[370px] md:h-[580px] md:w-[440px] shrink-0 rounded-[30px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
+          class="archive-card group relative h-[520px] sm:h-[580px] md:h-[620px] w-full rounded-[28px] border border-[#f3f0e8]/12 bg-[#0e110e] overflow-hidden flex flex-col cursor-pointer transition-all duration-500 hover:border-[#ff5a1f]/60 hover:shadow-[0_20px_50px_rgba(255,90,31,0.18)]"
           onclick="openVideoModal('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/user-files/fed9ca1c-81d9-4744-8dd6-daed21423db2/2013aa6e-158f-49f5-9eac-60c1cf3b8df7-Chrome-Capture-2026-06-13-1.m4v?v=1781296512801')">
           
           <div class="flex items-center justify-between border-b border-white/10 bg-[#141814] px-4 py-3 shrink-0 select-none z-10">
@@ -1813,45 +1868,7 @@
 
 
 
-    <section id="work-stats" class="work-section relative min-h-[100svh] overflow-hidden px-5 py-24 md:px-8 lg:px-12">
-      <div class="grid min-h-[100svh] items-center gap-12 md:grid-cols-12 landscape:gap-8 landscape:md:gap-14">
-        <div class="work-copy md:col-span-3">
-          <p class="section-label mb-8">
-            Projects
-          </p>
-          <h2 class="text-5xl font-semibold leading-[0.95] tracking-[-0.08em] md:text-6xl">
-            Selected Work
-          </h2>
-          <p class="mt-6 max-w-72 text-sm font-medium leading-[1.7] text-[#f3f0e8]/56">
-            Custom React tools, ecommerce storefronts, and marketing sites built for speed and conversions.
-          </p>
-          <a href="https://github.com/shayn468"
-            class="magnetic-button mt-8 inline-flex rounded-full border border-[#f3f0e8]/12 px-5 py-3 text-xs font-bold uppercase tracking-[0.12em]">
-            View GitHub
-          </a>
-        </div>
 
-        <div class="relative md:col-span-7 md:col-start-4">
-          <div class="relative flex min-h-[520px] items-center justify-center">
-            <span
-              class="masked-number select-none text-[13rem] font-black leading-none tracking-[-0.09em] md:text-[24rem] lg:text-[29rem]"
-              style="--number-image: url('Cafe.png'); background-position: 20% 80%;">
-              06
-            </span>
-          </div>
-        </div>
-
-        <div data-reveal="" class="md:col-span-2">
-          <p class="text-xs font-bold uppercase tracking-[0.12em] text-[#f3f0e8]/62">
-            Roles
-          </p>
-          <p class="mt-8 text-sm font-medium leading-[1.7] text-[#f3f0e8]/50">
-            Full-Stack Development,
-            Frontend, UI/UX
-          </p>
-        </div>
-      </div>
-    </section>
 
 
 
@@ -2594,65 +2611,39 @@
         .from(".pricing-copy", { y: 50, opacity: 0, duration: .35 }, 0)
         .from(".pricing-card", { y: 60, opacity: 0, stagger: .08, duration: .55 }, .1);
 
-      // 03. Archive carousel scroll (dynamically measures gallery width)
-      const getGalleryScroll = () => {
-        const gallery = document.querySelector(".archive-gallery");
-        if (!gallery) return 0;
-        const totalW = gallery.scrollWidth;
-        const viewW = window.innerWidth;
-        if (totalW <= viewW) return 0;
-        const overflow = totalW - viewW + 100;
-        return -((overflow / totalW) * 100);
-      };
-      window.getGalleryScroll = getGalleryScroll;
-
-      gsap.fromTo(".archive-card", 
-        { y: 40, opacity: 0.6 },
-        {
-          y: 0,
-          opacity: 1,
-          rotate: (i) => [-1.5, 1.2, -1.2, 1.5, -1, 1.2, -1.2, 1.5, -1, 1.2][i % 10],
-          stagger: 0.05,
-          duration: 0.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".archive-scroll-section",
-            start: "top bottom",
-            toggleActions: "play none none none"
-          }
-        }
-      );
-
-      gsap.fromTo([".archive-title", ".project-jump-nav"],
+      // 03. Commercial Work Grid Entrance Animations
+      gsap.fromTo(".archive-title",
         { y: 35, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.1,
           duration: 0.6,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ".archive-scroll-section",
+            trigger: "#commercial-work",
             start: "top 85%",
             toggleActions: "play none none none"
           }
         }
       );
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".archive-scroll-section",
-          start: "top 65%",
-          end: "bottom 15%",
-          scrub: 1,
-          invalidateOnRefresh: true
-        }
-      })
-        .to(".archive-gallery", {
-          xPercent: () => getGalleryScroll(),
-          ease: "none",
-          duration: 1
-        }, 0);
+      gsap.utils.toArray(".archive-card").forEach((card) => {
+        gsap.fromTo(card,
+          { y: 45, opacity: 0, scale: 0.98 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.65,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 88%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      });
 
       // 04. Work pinned number & projects
       const work = gsap.timeline({
