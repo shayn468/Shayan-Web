@@ -2,5 +2,5 @@
   <rect width="512" height="512" rx="112" fill="#060706"/>
   <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#262726" stroke-width="8"/>
   <text x="140" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="340" font-weight="900" fill="#f3f0e8" letter-spacing="-0.06em">S</text>
-  <circle cx="395" cy="340" r="38" fill="#ff5a1f"/>
+  <circle cx="395" cy="340" r="38" fill="#d4af37"/>
 </svg>
